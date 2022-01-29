@@ -8,16 +8,90 @@ export default function Home() {
     <div className="relative bg-white overflow-hidden">
       < Header />
       < Hero />
-      <div className="flex flex-row justify-between max-w-7xl mx-auto">
-        <div className="basis-1/3">
-          < Card1 />
+      <div>
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-2/3">
+            < Card2 />
+          </div>
         </div>
-        <div className="basis-2/3">
-          < Card2 />
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
         </div>
-
       </div>
-
+      <div>
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-2/3">
+            < Card2 />
+          </div>
+        </div>
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-2/3">
+            < Card2 />
+          </div>
+        </div>
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-2/3">
+            < Card2 />
+          </div>
+        </div>
+        <div className="flex flex-row justify-between max-w-7xl mx-auto">
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+          <div className="basis-1/3">
+            < Card1 />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
