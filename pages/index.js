@@ -128,7 +128,18 @@ export default function Home() {
       </div>
       <div>
         <footer className="bg-black my-auto">
-            hello
+           <div className="container text-white grid grid-cols-2 gap-16 py-8">
+              <div className="items-center">
+                <p>For more enquiries:</p>
+                <p>For more enquiries:</p>
+                <p>For more enquiries:</p>
+              </div>
+              <div className="flex gap-6">
+                <p>Instagram</p>
+                <p>Twitter</p>
+                <p>Linkedin</p>
+              </div>
+           </div>
         </footer>
       </div>
     </div>
