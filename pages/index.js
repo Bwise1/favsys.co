@@ -25,7 +25,7 @@ export default function Home() {
             < Card2 />
           </div>
           <div className="">
-            < Card1 />
+            < ImageCard />
           </div>
           <div className="">
             < Card1 />
