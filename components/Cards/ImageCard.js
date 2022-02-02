@@ -6,7 +6,7 @@ import photo from '../../public/signboard1.png';
 export default function ImageCard() {
     return (
         <div className="shadow-lg rounded rounded-bl-large">
-            <Image src={photo} alt='...' layout='responsive' className='rounded-bl-large'/>
+            <Image src={photo} alt='...' placeholder='blur' layout='responsive' className='rounded-bl-large'/>
         </div>
     );
 }

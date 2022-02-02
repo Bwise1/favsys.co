@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Card1 from "../components/Cards/Card1";
 import Card2 from "../components/Cards/Card2";
 import ImageCard from "../components/Cards/ImageCard";
+import ImageCard2 from "../components/Cards/ImageCard2";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
 import Image from "next/image";
@@ -28,10 +29,10 @@ export default function Home() {
             < ImageCard />
           </div>
           <div className="">
-            < Card1 />
+            < ImageCard2 />
           </div>
           <div className="">
-            < Card1 />
+            < ImageCard2 />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-4">
