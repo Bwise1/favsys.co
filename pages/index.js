@@ -5,6 +5,9 @@ import Card2 from "../components/Cards/Card2";
 import ImageCard from "../components/Cards/ImageCard";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
+import Image from "next/image";
+
+import photo from '../public/FFA.png';
 
 
 export default function Home() {
@@ -113,8 +116,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container">
-        <div></div>
+      <div className="container grid grid-cols-4 gap-16 max-w-screen-lg py-8">
+        <div> <Image src={photo} alt="logo"/> </div>
+        <div> <Image src={photo} alt="logo"/> </div>
+        <div> <Image src={photo} alt="logo"/> </div>
+        <div> <Image src={photo} alt="logo"/> </div>
+        <div> <Image src={photo} alt="logo"/> </div>
+        <div> <Image src={photo} alt="logo"/> </div>
+        <div> <Image src={photo} alt="logo"/> </div>
+        <div> <Image src={photo} alt="logo"/> </div>
       </div>
       <div>
         <footer className="bg-black my-auto">
