@@ -80,17 +80,17 @@ export default function Home() {
 
       {/*Testimonial Section*/}
       <div className="bg-favsent/[0.7] py-8">
-        <div className="">
-          <p>Testimonial</p>
+        <div className="flex">
+          <p className="title">Testimonial</p>
         </div>
-        <div className="container flex flex-row gap-10">
-          <div className="basis-1/3">
+        <div className="container grid grid-cols-3 gap-10 py-8">
+          <div className="">
             <TProfileCard />
           </div>
-          <div className="basis-1/3">
+          <div className="">
             <TProfileCard />
           </div>
-          <div className="basis-1/3">
+          <div className="">
             <TProfileCard />
           </div>
         </div>
@@ -98,8 +98,8 @@ export default function Home() {
 
       {/*Clients Section*/}
       <div className="my-12">
-        <div className="">
-          <p>Clients</p>
+        <div className="flex">
+          <p className="title" >Clients</p>
         </div>
         <div className="container grid grid-cols-4 gap-16 max-w-screen-lg py-8">
           <div> <Image src={photo} alt="logo" /> </div>
