@@ -19,7 +19,7 @@ export default function Home() {
       {/*Projects Section*/}
       <div className="container py-16 space-y-16">
         <div className="grid grid-cols-3 gap-4 ">
-          <div className="">
+          <div className="flex flex-wrap mt-auto">
             < Card1 />
           </div>
           <div className="col-span-2">
