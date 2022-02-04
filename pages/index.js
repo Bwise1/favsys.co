@@ -74,20 +74,20 @@ export default function Home() {
       </div>
 
 
-      {/*test*/}
+      {/*test
       <div className="container grid grid-cols-2 gap-4">
         <div className="bg-blue-500">ze an element’s content to cover its container cover its containecover its containecover its containecover its containe using this class.</div>
         <div className="bg-blue-500 "><Image src={photo} alt="logo" layout="responsive" className=""/></div>
         <div className="bg-blue-500 "></div>
         <div className="bg-blue-500 "></div>
       </div>
-      {/*Contact us Section*/}
+      {/*Contact us Section
       <div className="container my-12">
         <div className="text-xl font-bold">
           <h2 >In need of Service</h2>
         </div>
         <Contact />
-      </div>
+      </div> */}
 
       {/*Testimonial Section*/}
       <div className="bg-favsent/[0.7] py-8">
