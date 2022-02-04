@@ -16,13 +16,15 @@ export default function Home() {
       < Header />
       < Hero />
 
+
+      
       {/*Projects Section*/}
       <div className="container py-16 space-y-16">
         <div className="grid grid-cols-3 gap-4 ">
-          <div className="flex flex-wrap mt-auto">
+          <div className="">
             < Card1 />
           </div>
-          <div className="col-span-2">
+          <div className=" col-span-2">
             < Card2 />
           </div>
           <div className="">
@@ -71,6 +73,14 @@ export default function Home() {
         </div>
       </div>
 
+
+      {/*test*/}
+      <div className="container grid grid-cols-2 gap-4">
+        <div className="bg-blue-500">ze an element’s content to cover its container cover its containecover its containecover its containecover its containe using this class.</div>
+        <div className="bg-blue-500 "><Image src={photo} alt="logo" layout="responsive" className=""/></div>
+        <div className="bg-blue-500 "></div>
+        <div className="bg-blue-500 "></div>
+      </div>
       {/*Contact us Section*/}
       <div className="container my-12">
         <div className="text-xl font-bold">
