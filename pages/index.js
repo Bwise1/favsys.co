@@ -80,14 +80,14 @@ export default function Home() {
         <div className="bg-blue-500 "><Image src={photo} alt="logo" layout="responsive" className=""/></div>
         <div className="bg-blue-500 "></div>
         <div className="bg-blue-500 "></div>
-      </div>
-      {/*Contact us Section
+      </div> */}
+      {/*Contact us Section */}
       <div className="container my-12">
         <div className="text-xl font-bold">
           <h2 >In need of Service</h2>
         </div>
         <Contact />
-      </div> */}
+      </div> 
 
       {/*Testimonial Section*/}
       <div className="bg-favsent/[0.7] py-8">
