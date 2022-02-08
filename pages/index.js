@@ -7,7 +7,8 @@ import ImageCard from "../components/Cards/ImageCard";
 import ImageCard2 from "../components/Cards/ImageCard2";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
-import Client from "../components/Client";
+import Client from "../components/Cards/ClientCard";
+import Clients from "../components/Client"
 import Image from "next/image";
 
 import photo from '../public/FFA.png';
@@ -118,9 +119,7 @@ export default function Home() {
         <div className="flex">
           <p className="title" >Clients</p>
         </div>
-        <div className="container grid grid-cols-4 gap-16 max-w-screen-lg py-8">
-          <Client image = {photo}/>  
-        </div>
+        <Clients />
       </div>
 
       {/*Footer Section*/}
