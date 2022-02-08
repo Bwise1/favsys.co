@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Card1 from "../components/Cards/Card1";
@@ -11,6 +12,12 @@ import Image from "next/image";
 import photo from '../public/FFA.png';
 
 export default function Home() {
+  const [clicked, setClicked] = useState(false);
+
+  const btnClicked = (value) => {
+    setClicked(value);
+  }
+
   return (
     <div className="relative bg-white overflow-hidden">
       < Header />
@@ -22,20 +29,21 @@ export default function Home() {
       <div className="container py-16 space-y-16">
         <div className="grid grid-cols-3 gap-4 ">
           <div className="">
-            < Card1 />
+            < Card1 btnClicked={btnClicked}/>
           </div>
           <div className=" col-span-2">
             < Card2 />
           </div>
-          <div className="">
-            < ImageCard />
-          </div>
-          <div className="">
-            < ImageCard2 />
-          </div>
-          <div className="">
-            < ImageCard2 />
-          </div>
+          {clicked? 
+          
+            <><div className="">
+              <ImageCard />
+            </div><div className="">
+                <ImageCard2 />
+              </div><div className="">
+                <ImageCard2 />
+              </div></>
+           : null}
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div className="">

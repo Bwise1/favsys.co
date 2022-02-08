@@ -2,6 +2,9 @@ module.exports = {
   content: [],
   theme: {
     extend: {
+      fontFamily: {
+        umba: "Umba Soft SC Regular Demo",
+      },
       colors: {
         transparent: 'transparent',
         current: 'current',

@@ -5,3 +5,12 @@
 .title{
     @apply m-auto text-heroText font-bold uppercase;
 }
+
+@layer base{
+    @font-face {
+        font-family: 'Umba Soft SC Regular Demo';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Umba Soft SC Regular Demo'), url('/fonts/UmbaSoft-SCRegularDemo.woff') format('woff');
+        }
+}
