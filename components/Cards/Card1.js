@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Card1({btnClicked}) {
-    const [clicked, setClicked] = useState(false);
+    const [clicked, setClicked] = useState(true);
 
     return (
         <div className="bg-card1Paint/[0.7] shadow-lg h-full rounded relative p-8">

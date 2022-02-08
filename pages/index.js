@@ -7,6 +7,7 @@ import ImageCard from "../components/Cards/ImageCard";
 import ImageCard2 from "../components/Cards/ImageCard2";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
+import Client from "../components/Client";
 import Image from "next/image";
 
 import photo from '../public/FFA.png';
@@ -23,8 +24,6 @@ export default function Home() {
       < Header />
       < Hero />
 
-
-      
       {/*Projects Section*/}
       <div className="container py-16 space-y-16">
         <div className="grid grid-cols-3 gap-4 ">
@@ -35,7 +34,6 @@ export default function Home() {
             < Card2 />
           </div>
           {clicked? 
-          
             <><div className="">
               <ImageCard />
             </div><div className="">
@@ -121,14 +119,7 @@ export default function Home() {
           <p className="title" >Clients</p>
         </div>
         <div className="container grid grid-cols-4 gap-16 max-w-screen-lg py-8">
-          <div> <Image src={photo} alt="logo" /> </div>
-          <div> <Image src={photo} alt="logo" /> </div>
-          <div> <Image src={photo} alt="logo" /> </div>
-          <div> <Image src={photo} alt="logo" /> </div>
-          <div> <Image src={photo} alt="logo" /> </div>
-          <div> <Image src={photo} alt="logo" /> </div>
-          <div> <Image src={photo} alt="logo" /> </div>
-          <div> <Image src={photo} alt="logo" /> </div>
+          <Client image = {photo}/>  
         </div>
       </div>
 
