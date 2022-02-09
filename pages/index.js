@@ -20,6 +20,11 @@ import sign4 from "../public/signboards/sign4.png";
 import sign5 from "../public/signboards/sign5.png";
 import sign6 from "../public/signboards/sign6.png";
 
+import display3 from '../public/display3.png';
+import sign7 from "../public/signboards/sign4.png";
+import sign8 from "../public/signboards/sign5.png";
+import sign9 from "../public/signboards/sign6.png";
+
 
 export default function Home() {
   const [clicked, setClicked] = useState(false);
@@ -69,7 +74,7 @@ export default function Home() {
             < Card2 image = {display2}/>
           </div>
           <div className="">
-          <ImageCard image={sign4} />
+          <ImageCard image={sign4 } round="rounded-bl-large"/>
           </div>
           <div className="">
           <ImageCard image={sign5} />
@@ -83,7 +88,7 @@ export default function Home() {
             < Card1 />
           </div>
           <div className="col-span-2">
-            < Card2 image = {display}/>
+            < Card2 image = {display3}/>
           </div>
           <div className="">
             < Card1 />
