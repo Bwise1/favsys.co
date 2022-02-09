@@ -21,9 +21,14 @@ import sign5 from "../public/signboards/sign5.png";
 import sign6 from "../public/signboards/sign6.png";
 
 import display3 from '../public/display3.png';
-import sign7 from "../public/signboards/sign4.png";
-import sign8 from "../public/signboards/sign5.png";
-import sign9 from "../public/signboards/sign6.png";
+import sign7 from "../public/signboards/sign7.png";
+import sign8 from "../public/signboards/sign8.png";
+import sign9 from "../public/signboards/sign9.png";
+
+import display4 from '../public/display4.png';
+import sign10 from "../public/signboards/sign10.png";
+import sign11 from "../public/signboards/sign11.png";
+import sign12 from "../public/signboards/sign12.png";
 
 
 export default function Home() {
@@ -45,12 +50,14 @@ export default function Home() {
 
       {/*Projects Section*/}
       <div className="container py-16 space-y-16">
+
+        {/*FFA Project Section*/}
         <div className="grid grid-cols-3 gap-4 ">
           <div className="">
             < Card1 btnClicked={btnClicked} />
           </div>
           <div className=" col-span-2">
-            < Card2 image = {display}/>
+            < Card2 image={display} />
           </div>
           {clicked ?
             <>
@@ -66,38 +73,61 @@ export default function Home() {
             </>
             : null}
         </div>
+
+        {/*Isolated Paint Project Section*/}
         <div className="grid grid-cols-3 gap-4">
           <div className="">
             < Card1 btnClicked={btnClicked2} />
           </div>
           <div className="col-span-2">
-            < Card2 image = {display2}/>
+            < Card2 image={display2} />
           </div>
           <div className="">
-          <ImageCard image={sign4 } round="rounded-bl-large"/>
+            <ImageCard image={sign4} round="rounded-bl-large" />
           </div>
           <div className="">
-          <ImageCard image={sign5} />
+            <ImageCard image={sign5} />
           </div>
           <div className="">
-          <ImageCard image={sign6} />
+            <ImageCard image={sign6} />
           </div>
         </div>
+
+        {/*FAA Project Section*/}
         <div className="grid grid-cols-3 gap-4">
           <div className="">
             < Card1 />
           </div>
           <div className="col-span-2">
-            < Card2 image = {display3}/>
+            < Card2 image={display3} />
           </div>
+          <div className="">
+            <ImageCard image={sign7} round="rounded-bl-large" />
+          </div>
+          <div className="">
+            <ImageCard image={sign8} />
+          </div>
+          <div className="">
+            <ImageCard image={sign9} />
+          </div>
+        </div>
+
+        {/*BYS Project Section*/}
+        <div className="grid grid-cols-3 gap-4">
           <div className="">
             < Card1 />
           </div>
-          <div className="">
-            < Card1 />
+          <div className="col-span-2">
+            < Card2 image={display4} />
           </div>
           <div className="">
-            < Card1 />
+            <ImageCard image={sign10} round="rounded-bl-large" />
+          </div>
+          <div className="">
+            <ImageCard image={sign11} />
+          </div>
+          <div className="">
+            <ImageCard image={sign12} />
           </div>
         </div>
       </div>
