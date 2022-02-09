@@ -1,12 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import photo from '../../public/signboard1.png';
-
-export default function ImageCard() {
+export default function ImageCard(props) {
     return (
-        <div className="shadow-lg rounded rounded-bl-large">
-            <Image src={photo} alt='...' placeholder='blur' layout='responsive' className='rounded-bl-large'/>
+        <div className={`shadow-lg rounded overflow-hidden ${props.round}`}>
+            <Image src={props.image} alt='...' placeholder='blur' layout='responsive' className=''/>
         </div>
     );
 }

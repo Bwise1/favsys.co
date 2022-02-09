@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import photo from '../../public/rectangle1.png';
+import photo from '../../public/signboards/sign2.png';
 
 export default function ImageCard2() {
     return (

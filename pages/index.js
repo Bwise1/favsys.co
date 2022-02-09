@@ -7,17 +7,30 @@ import ImageCard from "../components/Cards/ImageCard";
 import ImageCard2 from "../components/Cards/ImageCard2";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
-import Client from "../components/Cards/ClientCard";
 import Clients from "../components/Client"
 import Image from "next/image";
 
-import photo from '../public/FFA.png';
+import display from '../public/display.png';
+import sign1 from "../public/signboards/sign1.png";
+import sign2 from "../public/signboards/sign2.png";
+import sign3 from "../public/signboards/sign3.png";
+
+import display2 from '../public/display2.png';
+import sign4 from "../public/signboards/sign4.png";
+import sign5 from "../public/signboards/sign5.png";
+import sign6 from "../public/signboards/sign6.png";
+
 
 export default function Home() {
   const [clicked, setClicked] = useState(false);
+  const [clicked2, setClicked2] = useState(false);
 
   const btnClicked = (value) => {
     setClicked(value);
+  }
+
+  const btnClicked2 = (value) => {
+    setClicked2(value);
   }
 
   return (
@@ -29,44 +42,48 @@ export default function Home() {
       <div className="container py-16 space-y-16">
         <div className="grid grid-cols-3 gap-4 ">
           <div className="">
-            < Card1 btnClicked={btnClicked}/>
+            < Card1 btnClicked={btnClicked} />
           </div>
           <div className=" col-span-2">
-            < Card2 />
+            < Card2 image = {display}/>
           </div>
-          {clicked? 
-            <><div className="">
-              <ImageCard />
-            </div><div className="">
-                <ImageCard2 />
-              </div><div className="">
-                <ImageCard2 />
-              </div></>
-           : null}
+          {clicked ?
+            <>
+              <div className="">
+                <ImageCard image={sign1} round="rounded-bl-large" />
+              </div>
+              <div className="">
+                <ImageCard image={sign2} />
+              </div>
+              <div className="">
+                <ImageCard image={sign3} />
+              </div>
+            </>
+            : null}
+        </div>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="">
+            < Card1 btnClicked={btnClicked2} />
+          </div>
+          <div className="col-span-2">
+            < Card2 image = {display2}/>
+          </div>
+          <div className="">
+          <ImageCard image={sign4} />
+          </div>
+          <div className="">
+          <ImageCard image={sign5} />
+          </div>
+          <div className="">
+          <ImageCard image={sign6} />
+          </div>
         </div>
         <div className="grid grid-cols-3 gap-4">
           <div className="">
             < Card1 />
           </div>
           <div className="col-span-2">
-            < Card2 />
-          </div>
-          <div className="">
-            < Card1 />
-          </div>
-          <div className="">
-            < Card1 />
-          </div>
-          <div className="">
-            < Card1 />
-          </div>
-        </div>
-        <div className="grid grid-cols-3 gap-4">
-          <div className="">
-            < Card1 />
-          </div>
-          <div className="col-span-2">
-            < Card2 />
+            < Card2 image = {display}/>
           </div>
           <div className="">
             < Card1 />
@@ -94,7 +111,7 @@ export default function Home() {
           <h2 >In need of Service</h2>
         </div>
         <Contact />
-      </div> 
+      </div>
 
       {/*Testimonial Section*/}
       <div className="bg-favsent/[0.7] py-8">
