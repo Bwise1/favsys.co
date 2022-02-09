@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 import Card1 from "../components/Cards/Card1";
 import Card2 from "../components/Cards/Card2";
 import ImageCard from "../components/Cards/ImageCard";
-import ImageCard2 from "../components/Cards/ImageCard2";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
 import Clients from "../components/Client"
@@ -30,6 +29,10 @@ import sign10 from "../public/signboards/sign10.png";
 import sign11 from "../public/signboards/sign11.png";
 import sign12 from "../public/signboards/sign12.png";
 
+import profile1 from "../public/profile1.png";
+import profile2 from "../public/profile2.png";
+import profile3 from "../public/profile3.png";
+
 
 export default function Home() {
   const [clicked, setClicked] = useState(false);
@@ -49,7 +52,7 @@ export default function Home() {
       < Hero />
 
       {/*Projects Section*/}
-      <div className="container py-16 space-y-16">
+      <div className="container py-16 space-y-12">
 
         {/*FFA Project Section*/}
         <div className="grid grid-cols-3 gap-4 ">
@@ -155,13 +158,13 @@ export default function Home() {
         </div>
         <div className="container grid grid-cols-3 gap-10 py-8">
           <div className="">
-            <TProfileCard />
+            <TProfileCard image={profile1} />
           </div>
           <div className="">
-            <TProfileCard />
+            <TProfileCard image={profile2}/>
           </div>
           <div className="">
-            <TProfileCard />
+            <TProfileCard image={profile3}/>
           </div>
         </div>
       </div>

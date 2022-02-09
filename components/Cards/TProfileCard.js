@@ -1,27 +1,25 @@
 import React from 'react';
 import Image from 'next/image';
-import Person from "../../public/user.png";
 
-export default function TProfileCard() {
+export default function TProfileCard(props) {
     return (
         <div>
-            <div className="flex-row gap-4 flex justify-start items-center">
-                <div className="flex-shrink-0 rounded-full border-2 overflow-hidden p-2">
+            <div className="flex-row gap-2 flex justify-start items-center">
+                <div className="flex-shrink-0 rounded-full overflow-hidden">
                     <Image
-                        src={Person}
+                        src={props.image}
                         alt="Picture of the author"
-                        width={107}
-                        height={107}
-                    //objectFit="cover"
-
+                        width={100}
+                        height={100}
+                        objectFit="cover"
                     />
                 </div>
                 <div className=" flex flex-col">
-                    <h3 className="text-sm font-semibold">FFA - Funke Felix-Adejumo</h3>
-                    <p className="text-grey-dark font-thin text-sm leading-normal ">
+                    <h3 className="text-sm font-umbaMedium font-semibold">FFA - Funke Felix-Adejumo</h3>
+                    <p className="text-grey-dark font-umbaThin text-xs leading-normal ">
                         President, Funke Felix-Adejumo Foundation
                     </p>
-                    <p className="text-grey-dark font-thin text-sm my-4 ">
+                    <p className="text-grey-dark font-umbaThin font-thin text-sm my-4 ">
                         You are a Genius! I can recommend you in my dreams
                     </p>
                 </div>
