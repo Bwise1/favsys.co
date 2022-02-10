@@ -14,7 +14,7 @@ import image08 from '../../public/clients/clients-08.png';
 export default function Client(props) {
     
     return (
-        <div className="container grid grid-cols-4 gap-2 max-w-screen-lg py-2">
+        <div className="container grid grid-cols-2 gap-2 max-w-screen-lg py-2">
             <ClientCard image={image01}/>
             <ClientCard image={image02}/>
             <ClientCard image={image03}/>

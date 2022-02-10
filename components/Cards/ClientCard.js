@@ -8,8 +8,8 @@ export default function Client(props) {
     } = props;
 
     return (
-        <div >
-            <Image src={props.image} alt="logo" />
+        <div className="relative">
+            <Image width="70" height="70" layout="responsive" src={props.image} alt="logo" />
         </div>
     );
 }

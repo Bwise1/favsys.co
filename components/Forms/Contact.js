@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <div>
             <form>
-                <div className='grid grid-cols-2 gap-y-6 gap-x-16 py-8'>
+                <div className='grid gap-y-6 gap-x-16 py-8'>
                     <div className="">
                         <input className="border-b w-full focus:outline-none " type="name" id="email" placeholder="Name" required />
                     </div>
@@ -17,7 +17,7 @@ export default function Contact() {
                     <div>
                         <input className="border-b w-full focus:outline-none" type="email" id="email" placeholder="Work Email" required />
                     </div>
-                    <div className='col-span-2'>
+                    <div className='lg:col-span-2'>
                         <input className="border-b w-full focus:outline-none" type="text" id="message" placeholder="Message" required />
                     </div>
                     <div>

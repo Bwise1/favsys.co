@@ -156,14 +156,14 @@ export default function Home() {
         <div className="flex">
           <p className="title">Testimonial</p>
         </div>
-        <div className="container grid grid-cols-3 gap-10 py-8">
-          <div className="">
+        <div className="container grid grid-cols-1 gap-10 py-8 lg:grid-cols-3">
+          <div className="m-auto">
             <TProfileCard image={profile1} />
           </div>
-          <div className="">
+          <div className="m-auto">
             <TProfileCard image={profile2}/>
           </div>
-          <div className="">
+          <div className="m-auto">
             <TProfileCard image={profile3}/>
           </div>
         </div>
