@@ -52,19 +52,19 @@ export default function Home() {
       < Hero />
 
       {/*Projects Section*/}
-      <div className="container py-16 space-y-12">
+      <div className="container py-8 lg:py-16 space-y-12">
 
         {/*FFA Project Section*/}
-        <div className="grid grid-cols-3 gap-4 ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
             < Card1 btnClicked={btnClicked} />
           </div>
-          <div className=" col-span-2">
+          <div className="order-first lg:col-span-2 lg:order-none ">
             < Card2 image={display} />
           </div>
           {clicked ?
             <>
-              <div className="">
+              <div className="order-last lg:order-none">
                 <ImageCard image={sign1} round="rounded-bl-large" />
               </div>
               <div className="">
@@ -78,14 +78,14 @@ export default function Home() {
         </div>
 
         {/*Isolated Paint Project Section*/}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
             < Card1 btnClicked={btnClicked2} />
           </div>
-          <div className="col-span-2">
+          <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display2} />
           </div>
-          <div className="">
+          <div className="order-last lg:order-none">
             <ImageCard image={sign4} round="rounded-bl-large" />
           </div>
           <div className="">
@@ -97,14 +97,14 @@ export default function Home() {
         </div>
 
         {/*FAA Project Section*/}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
             < Card1 />
           </div>
-          <div className="col-span-2">
+          <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display3} />
           </div>
-          <div className="">
+          <div className="order-last lg:order-none">
             <ImageCard image={sign7} round="rounded-bl-large" />
           </div>
           <div className="">
@@ -116,14 +116,14 @@ export default function Home() {
         </div>
 
         {/*BYS Project Section*/}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
             < Card1 />
           </div>
-          <div className="col-span-2">
+          <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display4} />
           </div>
-          <div className="">
+          <div className="order-last lg:order-none">
             <ImageCard image={sign10} round="rounded-bl-large" />
           </div>
           <div className="">
@@ -179,14 +179,14 @@ export default function Home() {
 
       {/*Footer Section*/}
       <div>
-        <footer className="bg-black my-auto">
+        <footer className="bg-black font-umbaLight my-auto">
           <div className="container text-white grid grid-cols-2 gap-16 py-8">
-            <div className="items-center">
+            <div className="m-auto alignitems-center">
               <p>For more enquiries:</p>
-              <p>For more enquiries:</p>
-              <p>For more enquiries:</p>
+              <p>info@favsys.co</p>
+              <p>Call: +234 (0) 813 663 1392</p>
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-6 m-auto">
               <p>Instagram</p>
               <p>Twitter</p>
               <p>Linkedin</p>
