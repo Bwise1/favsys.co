@@ -62,10 +62,10 @@ export default function Home() {
       < Hero />
 
       {/*Projects Section*/}
-      <div className="container py-8 lg:py-16 space-y-12">
+      <div className="container py-8 space-y-8 lg:py-16">
 
         {/*FFA Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1 handleClick={btnClicked} />
           </div>
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
 
         {/*Isolated Paint Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1 handleClick={btnClicked2} />
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
 
         {/*FAA Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1 handleClick={btnClicked3} />
           </div>
@@ -133,7 +133,7 @@ export default function Home() {
         </div>
 
         {/*BYS Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1 handleClick={btnClicked4} />
           </div>
