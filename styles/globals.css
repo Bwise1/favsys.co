@@ -8,40 +8,84 @@
 
 @layer base{
     @font-face {
-        font-family: 'Umba Soft SC Regular Demo';
-        font-style: normal;
+        font-family: 'Umba Soft Regular';
+        src: local('Umba Soft Regular'), 
+            local('UmbaSoft-Regular'),
+            url('/fonts/UmbaSoft-Regular.woff2') format('woff2');
         font-weight: normal;
-        src: local('Umba Soft SC Regular Demo'), url('/fonts/UmbaSoft-SCRegularDemo.woff') format('woff');
-        }
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Umba Soft Bold';
+        src: local('Umba Soft Bold'), local('UmbaSoft-Bold'),
+            url('/fonts/UmbaSoft-Bold.woff2') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+    }
 
-        @font-face {
-            font-family: 'Umba Soft SC Thin Demo';
-            font-style: normal;
-            font-weight: normal;
-            src: local('Umba Soft SC Thin Demo'), url('/fonts/UmbaSoft-SCThinDemo.woff') format('woff');
-            }
-            
-        
-            @font-face {
-            font-family: 'Umba Soft SC Light Demo';
-            font-style: normal;
-            font-weight: normal;
-            src: local('Umba Soft SC Light Demo'), url('/fonts/UmbaSoft-SCLightDemo.woff') format('woff');
-            }
-            
-        
-            @font-face {
-            font-family: 'Umba Soft SC Medium Demo';
-            font-style: normal;
-            font-weight: normal;
-            src: local('Umba Soft SC Medium Demo'), url('/fonts/UmbaSoft-SCMediumDemo.woff') format('woff');
-            }
-            
-        
-            @font-face {
-            font-family: 'Umba Soft SC Bold Demo';
-            font-style: normal;
-            font-weight: normal;
-            src: local('Umba Soft SC Bold Demo'), url('/fonts/UmbaSoft-SCBoldDemo.woff') format('woff');
-            }
+    @font-face {
+        font-family: 'Umba Soft Medium';
+        src: local('Umba Soft Medium'), local('UmbaSoft-Medium'),
+            url('/fonts/UmbaSoft-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Umba Soft Light Italic';
+        src: local('Umba Soft Light Italic'), local('UmbaSoft-LightItalic'),
+            url('/fonts/UmbaSoft-LightItalic.woff2') format('woff2');
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    
+    @font-face {
+        font-family: 'Umba Soft Italic';
+        src: local('Umba Soft Italic'), local('UmbaSoft-Italic'),
+            url('/fonts/UmbaSoft-Italic.woff2') format('woff2');
+        font-weight: normal;
+        font-style: italic;
+    }
+ 
+    @font-face {
+        font-family: 'Umba Soft Medium Italic';
+        src: local('Umba Soft Medium Italic'), local('UmbaSoft-MediumItalic'),
+            url('/fonts/UmbaSoft-MediumItalic.woff2') format('woff2');
+        font-weight: 500;
+        font-style: italic;
+    }
+  
+    @font-face {
+        font-family: 'Umba Soft Bold Italic';
+        src: local('Umba Soft Bold Italic'), local('UmbaSoft-BoldItalic'),
+            url('/fonts/UmbaSoft-BoldItalic.woff2') format('woff2');
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    @font-face {
+        font-family: 'Umba Soft Light';
+        src: local('Umba Soft Light'), local('UmbaSoft-Light'),
+            url('/fonts/UmbaSoft-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'Umba Soft Thin';
+        src: local('Umba Soft Thin'), local('UmbaSoft-Thin'),
+            url('/fonts/UmbaSoft-Thin.woff2') format('woff2');
+        font-weight: 100;
+        font-style: normal;
+    }
+  
+    @font-face {
+        font-family: 'Umba Soft Thin Italic';
+        src: local('Umba Soft Thin Italic'), local('UmbaSoft-ThinItalic'),
+            url('/fonts/UmbaSoft-ThinItalic.woff2') format('woff2');
+        font-weight: 100;
+        font-style: italic;
+    }
 }
