@@ -37,13 +37,23 @@ import profile3 from "../public/profile3.png";
 export default function Home() {
   const [clicked, setClicked] = useState(false);
   const [clicked2, setClicked2] = useState(false);
+  const [clicked3, setClicked3] = useState(false);
+  const [clicked4, setClicked4] = useState(false);
 
-  const btnClicked = (value) => {
-    setClicked(value);
+  const btnClicked = () => {
+    setClicked(!clicked);
   }
 
-  const btnClicked2 = (value) => {
-    setClicked2(value);
+  const btnClicked2 = () => {
+    setClicked2(!clicked2);
+  }
+
+  const btnClicked3 = () => {
+    setClicked3(!clicked3);
+  }
+
+  const btnClicked4 = () => {
+    setClicked4(!clicked4);
   }
 
   return (
@@ -57,7 +67,7 @@ export default function Home() {
         {/*FFA Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
-            < Card1 btnClicked={btnClicked} />
+            < Card1 handleClick={btnClicked} />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none ">
             < Card2 image={display} />
@@ -80,58 +90,70 @@ export default function Home() {
         {/*Isolated Paint Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
-            < Card1 btnClicked={btnClicked2} />
+            < Card1 handleClick={btnClicked2} />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display2} />
           </div>
-          <div className="order-last lg:order-none">
-            <ImageCard image={sign4} round="rounded-bl-large" />
-          </div>
-          <div className="">
-            <ImageCard image={sign5} />
-          </div>
-          <div className="">
-            <ImageCard image={sign6} />
-          </div>
+          {clicked2 &&
+            <>
+              <div className="order-last lg:order-none">
+                <ImageCard image={sign4} round="rounded-bl-large" />
+              </div>
+              <div className="">
+                <ImageCard image={sign5} />
+              </div>
+              <div className="">
+                <ImageCard image={sign6} />
+              </div>
+            </>}
+
         </div>
 
         {/*FAA Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
-            < Card1 />
+            < Card1 handleClick={btnClicked3} />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display3} />
           </div>
-          <div className="order-last lg:order-none">
-            <ImageCard image={sign7} round="rounded-bl-large" />
-          </div>
-          <div className="">
-            <ImageCard image={sign8} />
-          </div>
-          <div className="">
-            <ImageCard image={sign9} />
-          </div>
+          {clicked3 &&
+            <>
+              <div className="order-last lg:order-none">
+                <ImageCard image={sign7} round="rounded-bl-large" />
+              </div>
+              <div className="">
+                <ImageCard image={sign8} />
+              </div>
+              <div className="">
+                <ImageCard image={sign9} />
+              </div>
+            </>}
         </div>
 
         {/*BYS Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
           <div className="">
-            < Card1 />
+            < Card1 handleClick={btnClicked4} />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display4} />
           </div>
-          <div className="order-last lg:order-none">
-            <ImageCard image={sign10} round="rounded-bl-large" />
-          </div>
-          <div className="">
-            <ImageCard image={sign11} />
-          </div>
-          <div className="">
-            <ImageCard image={sign12} />
-          </div>
+          {clicked4 &&
+            <>
+              <div className="order-last lg:order-none">
+                <ImageCard image={sign10} round="rounded-bl-large" />
+              </div>
+              <div className="">
+                <ImageCard image={sign11} />
+              </div>
+              <div className="">
+                <ImageCard image={sign12} />
+              </div>
+            </>
+          }
+
         </div>
       </div>
 
@@ -161,10 +183,10 @@ export default function Home() {
             <TProfileCard image={profile1} />
           </div>
           <div className="m-auto">
-            <TProfileCard image={profile2}/>
+            <TProfileCard image={profile2} />
           </div>
           <div className="m-auto">
-            <TProfileCard image={profile3}/>
+            <TProfileCard image={profile3} />
           </div>
         </div>
       </div>
