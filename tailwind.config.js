@@ -15,7 +15,8 @@ module.exports = {
         'favsent': '#FEE8E8',
         'card1Paint': '#EEEEEE',
         'card2Paint': '#F2B263',
-        'buttonPaint': '#F41919'       
+        'buttonPaint': '#F41919',
+        'buttonHover': '#FEE8E8'       
       },
       borderRadius: {
         'large': '45.283px',
