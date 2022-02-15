@@ -9,7 +9,7 @@ export default function Client(props) {
 
     return (
         <div className="transform p-4 transition duration-500 hover:scale-125">
-            <Image src={props.image} alt="logo" width={228} height={75} placeholder='blur' layout="responsive" objectFit='contain' />
+            <Image src={props.image} alt="logo" width={328} height={70} placeholder='blur' layout="responsive" objectFit='contain' />
         </div>
     );
 }
