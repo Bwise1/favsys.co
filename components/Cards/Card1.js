@@ -9,7 +9,7 @@ export default function Card1(props) {
                 <p className="text-grey-dark text-left font-umbaReg  text-sm leading-normal flex-1 mb-2 mt-6">
                    {props.text}
                 </p>
-                <button onClick={props.handleClick} className='button py-1 px-4 '>VIEW MORE</button>
+                <button onClick={props.handleClick} className='button py-2 px-4'>VIEW MORE</button>
             </div>
         </div>
     );
