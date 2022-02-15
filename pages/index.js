@@ -7,7 +7,6 @@ import ImageCard from "../components/Cards/ImageCard";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
 import Clients from "../components/Client"
-import Image from "next/image";
 
 import display from '../public/display.png';
 import sign1 from "../public/signboards/sign1.png";
@@ -208,14 +207,14 @@ export default function Home() {
 
       {/*Footer Section*/}
       <div>
-        <footer className="bg-black font-umbaLight my-auto">
-          <div className="container text-white grid grid-cols-2 gap-16 py-8">
+        <footer className="bg-black text-center lg:text-left text-lg font-umbaReg my-auto">
+          <div className="container text-white gap-4 grid lg:grid-cols-2  py-8">
             <div className="m-auto alignitems-center">
-              <p>For more enquiries:</p>
-              <p>info@favsys.co</p>
-              <p>Call: +234 (0) 813 663 1392</p>
+              <p >For more enquiries:</p>
+              <p className='font-umbaMedium'>info@favsys.co</p>
+              <p className='font-umbaMedium'>Call: +234 (0) 813 663 1392</p>
             </div>
-            <div className="flex gap-6 m-auto">
+            <div className="flex font-umbaMedium gap-6 m-auto">
               <p>Instagram</p>
               <p>Twitter</p>
               <p>Linkedin</p>
