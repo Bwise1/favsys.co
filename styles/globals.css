@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .title{
-    @apply m-auto text-heroText font-umbaBold font-bold uppercase;
+    @apply m-auto text-heroText font-umbaBold text-lg tracking-wider uppercase;
+}
+
+.contact-input{
+    @apply border-b border-black/[0.5] w-full focus:outline-none;
 }
 
 @layer base{
