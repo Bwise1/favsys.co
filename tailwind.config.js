@@ -23,6 +23,9 @@ module.exports = {
       },
       textColor: {
         'heroText': '#F41919'
+      },
+      height: {
+        '99': '32rem',
       }
     },
     container: {
