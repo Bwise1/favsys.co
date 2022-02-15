@@ -67,7 +67,11 @@ export default function Home() {
         {/*FFA Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
-            < Card1 handleClick={btnClicked} />
+            < Card1
+              heading="FFA - Funke Felix-Adejumo"
+              text="Funke Felix-Adejumo is the President of the Funke Felix-Adejumo Foundation. She is a Certified Transformational Coach, Esecutive Coach and an Itinerant Preacher." 
+              handleClick={btnClicked} 
+            />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none ">
             < Card2 image={display} />
@@ -90,7 +94,11 @@ export default function Home() {
         {/*Isolated Paint Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
-            < Card1 handleClick={btnClicked2} />
+            < Card1
+              heading="Isolated Paint" 
+              text="Isolated Paints is a paint producing company located in South-Eastern Nigeria with the aim of providing quality paints and also encouraging nature conserving products."
+              handleClick={btnClicked2} 
+            />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display2} />
@@ -113,7 +121,11 @@ export default function Home() {
         {/*FAA Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
-            < Card1 handleClick={btnClicked3} />
+            < Card1 
+              heading="FAA - Felix Aderemi Adejumo"
+              text="Felix Aderemi Adejumo is the Founder and Senior Pastor of The Agape Christian Ministries Worldwide. He is an anointed preacher of the gospel, a marriage and leadership coach and a Book writer, having authored quite a number of books."
+              handleClick={btnClicked3} 
+            />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display3} />
@@ -135,7 +147,10 @@ export default function Home() {
         {/*BYS Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
-            < Card1 handleClick={btnClicked4} />
+            < Card1
+              heading="BYS - Beyond Your Scars"
+              text="BYS is an international establishment committed to raising a young generation of kingdom driven influencers and transformational leaders who have risen above their past traumas or life conditions and serve as standard bearers in their communities and around the globe."
+              handleClick={btnClicked4} />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display4} />
