@@ -211,8 +211,8 @@ export default function Home() {
           <div className="container text-white gap-4 grid lg:grid-cols-2  py-8">
             <div className="m-auto alignitems-center">
               <p >For more enquiries:</p>
-              <a className='font-umbaMedium' href={"mailto:info@favsys.co"}>info@favsys.co</a>
-              <p className='font-umbaMedium'>Call: +234 (0) 813 663 1392</p>
+              <p> <a className='font-umbaMedium' href="mailto:info@favsys.co">info@favsys.co</a> </p>
+              <p> <a className='font-umbaMedium' href="tel:+2348136631392">Call: +234 (0) 813 663 1392</a></p>
             </div>
             <div className="flex font-umbaMedium gap-6 m-auto">
               <p>Instagram</p>
