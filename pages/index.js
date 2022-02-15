@@ -68,7 +68,7 @@ export default function Home() {
           <div className="">
             < Card1
               heading="FFA - Funke Felix-Adejumo"
-              text="Funke Felix-Adejumo is the President of the Funke Felix-Adejumo Foundation. She is a Certified Transformational Coach, Esecutive Coach and an Itinerant Preacher." 
+              text="Funke Felix-Adejumo is the President of the Funke Felix-Adejumo Foundation. She is a Certified Transformational Coach, Executive Coach and an Itinerant Preacher." 
               handleClick={btnClicked} 
             />
           </div>
@@ -174,7 +174,7 @@ export default function Home() {
       {/*Contact us Section */}
       <div className="container my-12">
         <div className="text-xl font-umbaBold">
-          <h2 >In need of Service</h2>
+          <h2 >In need of our Service</h2>
         </div>
         <Contact />
       </div>

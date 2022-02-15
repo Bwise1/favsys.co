@@ -21,7 +21,7 @@ export default function Contact() {
                         <input className="contact-input" type="text" id="message" placeholder="Message" required />
                     </div>
                     <div>
-                        <button className='button py-2 px-5'>Submit</button>
+                        <button className='button py-2 px-2'>Submit</button>
                     </div>
                 </div>
             </form>
