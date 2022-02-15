@@ -7,9 +7,9 @@ export default function Header() {
         <div className="bg-favsent/[0.7]">
             <header className="flex justify-between container items-start ">
                 <div className="flex items-center space-x-5 mt-4">
-                    <Link href="/" passHref>
+                    
                         <Image src={Logo} alt="Logo" height={39} width={123} />
-                    </Link>
+                    
 
                 </div>
                 <div className="flex space-x-5 mt-4">
