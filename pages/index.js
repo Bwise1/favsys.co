@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Card1 from "../components/Cards/Card1";
@@ -6,7 +8,7 @@ import Card2 from "../components/Cards/Card2";
 import ImageCard from "../components/Cards/ImageCard";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
-import Clients from "../components/Client"
+import Clients from "../components/Client";
 
 import display from '../public/display.png';
 import sign1 from "../public/signboards/sign1.png";
@@ -68,35 +70,38 @@ export default function Home() {
           <div className="">
             < Card1
               heading="FFA - Funke Felix-Adejumo"
-              text="Funke Felix-Adejumo is the President of the Funke Felix-Adejumo Foundation. She is a Certified Transformational Coach, Executive Coach and an Itinerant Preacher." 
-              handleClick={btnClicked} 
+              text="Funke Felix-Adejumo is the President of the Funke Felix-Adejumo Foundation. She is a Certified Transformational Coach, Executive Coach and an Itinerant Preacher."
+              handleClick={btnClicked}
             />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none ">
             < Card2 image={display} />
           </div>
-          {clicked ?
-            <>
-              <div className="order-last lg:order-none">
-                <ImageCard image={sign1} round="rounded-bl-large" />
-              </div>
-              <div className="">
-                <ImageCard image={sign2} />
-              </div>
-              <div className="">
-                <ImageCard image={sign3} />
-              </div>
-            </>
-            : null}
+          <AnimatePresence>
+            {clicked ?
+              <>
+                < motion.div animate={{width:"100%"}} initial={{width:"0"}} exit={{width: "0"}} className="order-last lg:order-none">
+                  <ImageCard image={sign1} round="rounded-bl-large" />
+                </motion.div>
+                <motion.div animate={{width:"100%"}} initial={{width:"0"}} exit={{width: "0"}} className="">
+                  <ImageCard image={sign2} />
+                </motion.div>
+                <motion.div animate={{width:"100%"}} initial={{width:"0"}} exit={{width: "0"}} className="">
+                  <ImageCard image={sign3} />
+                </motion.div>
+              </>
+              : null}
+          </AnimatePresence>
+
         </div>
 
         {/*Isolated Paint Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
-              heading="Isolated Paint" 
+              heading="Isolated Paint"
               text="Isolated Paints is a paint producing company located in South-Eastern Nigeria with the aim of providing quality paints and also encouraging nature conserving products."
-              handleClick={btnClicked2} 
+              handleClick={btnClicked2}
             />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
@@ -120,10 +125,10 @@ export default function Home() {
         {/*FAA Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
-            < Card1 
+            < Card1
               heading="FAA - Felix Aderemi Adejumo"
               text="Felix Aderemi Adejumo is the Founder and Senior Pastor of The Agape Christian Ministries Worldwide. He is an anointed preacher of the gospel, a marriage and leadership coach and a Book writer, having authored quite a number of books."
-              handleClick={btnClicked3} 
+              handleClick={btnClicked3}
             />
           </div>
           <div className="order-first lg:col-span-2 lg:order-none">
