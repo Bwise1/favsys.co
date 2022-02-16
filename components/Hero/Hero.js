@@ -13,15 +13,22 @@ export default function Hero(){
                         scale: 1,
                         opacity: 1,
                         transition: {
-                          delay: .4
+                          delay: .3
                         }
                       },
-                }} className='text-4xl tracking-tight font-umbaBold text-heroText sm:text-5xl md:text-6xl'>
+                }} 
+                whileHover={{
+                    scale: 1.1,
+                    transition: {
+                        duration: .2
+                    }
+                }}
+                className='text-4xl tracking-tight font-umbaBold text-heroText sm:text-5xl md:text-6xl'>
                     <h1 className=''>we brand,</h1>
                     <h2>with you in mind.</h2>
                 </motion.div>
                 <div>
-                    <p className='max-w-md p-4 font-umbaMedium text-center'>We team up with purpose driven businesses to build brands that thrive globally using compelling graphics and strategic contents.</p>
+                    <p className='transform transition duration-500 hover:scale-125 max-w-md p-4 font-umbaMedium text-center'>We team up with purpose driven businesses to build brands that thrive globally using compelling graphics and strategic contents.</p>
                 </div>
         </div>
     )

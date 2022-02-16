@@ -80,13 +80,13 @@ export default function Home() {
           <AnimatePresence>
             {clicked ?
               <>
-                < motion.div animate={{width:"100%"}} initial={{width:"0"}} exit={{width: "0"}} className="order-last lg:order-none">
+                < motion.div animate={{width:"100%"}} initial={{width:"0"}} className="order-last lg:order-none">
                   <ImageCard image={sign1} round="rounded-bl-large" />
                 </motion.div>
-                <motion.div animate={{width:"100%"}} initial={{width:"0"}} exit={{width: "0"}} className="">
+                <motion.div animate={{width:"100%"}} initial={{width:"0"}} className="">
                   <ImageCard image={sign2} />
                 </motion.div>
-                <motion.div animate={{width:"100%"}} initial={{width:"0"}} exit={{width: "0"}} className="">
+                <motion.div animate={{width:"100%"}} initial={{width:"0"}} className="">
                   <ImageCard image={sign3} />
                 </motion.div>
               </>
