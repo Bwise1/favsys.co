@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {fadeIn} from '../../animations/variants.ts';
 
 export default function Hero(){
     return(
@@ -28,7 +29,11 @@ export default function Hero(){
                     <h2>with you in mind.</h2>
                 </motion.div>
                 <div>
-                    <p className='transform transition duration-500 hover:scale-125 max-w-md p-4 font-umbaMedium text-center'>We team up with purpose driven businesses to build brands that thrive globally using compelling graphics and strategic contents.</p>
+                    <motion.p variants={fadeIn()} initial="initial" animate="animate" whileHover={{
+                    scale: 1.1,
+                    transition: {
+                        duration: .2
+                    }}} className='transform transition duration-500 hover:scale-125 max-w-md p-4 font-umbaMedium text-center'>We team up with purpose driven businesses to build brands that thrive globally using compelling graphics and strategic contents.</motion.p>
                 </div>
         </div>
     )
