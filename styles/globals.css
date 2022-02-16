@@ -7,7 +7,7 @@
 }
 
 .contact-input{
-    @apply border-b font-umbaReg border-black/[0.5] w-full focus:outline-none;
+    @apply border-b font-umbaReg border-black/[0.5] w-full focus:outline-none placeholder:font-umbaReg;
 }
 
 .button{

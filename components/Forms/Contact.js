@@ -6,7 +6,7 @@ export default function Contact() {
             <form>
                 <div className='grid gap-y-6 gap-x-16 py-8 font-umbaReg'>
                     <div className="">
-                        <input className="contact-input placeholder:font-umbaBold" name="email" type="name" id="email" placeholder="Name" required />
+                        <input className="contact-input" name="email" type="name" id="email" placeholder="Name" required />
                     </div>
                     <div>
                         <input className="contact-input" type="text" id="org" placeholder="Organization" required />
