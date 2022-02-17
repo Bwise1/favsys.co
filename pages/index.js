@@ -77,7 +77,9 @@ export default function Home() {
           <div className="order-first lg:col-span-2 lg:order-none ">
             < Card2 image={display} />
           </div>
-          <AnimatePresence>
+
+          {/*Temp fix for annimate presense*/}
+          <AnimatePresence >
             {clicked ?
               <>
                 < motion.div animate={{width:"100%"}} initial={{width:"0"}} className="order-last lg:order-none">
