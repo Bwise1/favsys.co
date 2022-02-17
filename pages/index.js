@@ -151,7 +151,7 @@ export default function Home() {
         </div>
 
         {/*BYS Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2 md:">
           <div className="">
             < Card1
               heading="BYS - Beyond Your Scars"
