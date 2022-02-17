@@ -17,9 +17,12 @@
 @layer base{
     @font-face {
         font-family: 'Umba Soft Regular';
-        src: local('Umba Soft Regular'), 
-            local('UmbaSoft-Regular'),
-            url('/fonts/UmbaSoft-Regular.woff2') format('woff2');
+        src: url('/fonts/UmbaSoft-Regular.eot');
+        src: local('Umba Soft Regular'), local('UmbaSoft-Regular'),
+            url('/fonts/UmbaSoft-Regular.eot?#iefix') format('embedded-opentype'),
+            url('/fonts/UmbaSoft-Regular.woff2') format('woff2'),
+            url('/fonts/UmbaSoft-Regular.woff') format('woff'),
+            url('/fonts/UmbaSoft-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
