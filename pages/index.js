@@ -221,7 +221,7 @@ export default function Home() {
               <p> <a className='' href="mailto:info@favsys.co">info@favsys.co</a> </p>
               <p> <a className='' href="tel:+2348136631392">Call: +234 (0) 813 663 1392</a></p>
             </div>
-            <div className="flex  gap-6 m-auto">
+            <div className="flex gap-6 m-auto">
               <p>Instagram</p>
               <p>Twitter</p>
               <p>Linkedin</p>

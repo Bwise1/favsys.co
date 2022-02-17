@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        umbaReg: "Umba Soft",
+        umbaReg: "Umba Soft Regular",
         umbaThin: "Umba Soft Thin",
         umbaLight: "Umba Soft Light",
         umbaMedium: "Umba Soft Medium",
