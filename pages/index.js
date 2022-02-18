@@ -63,7 +63,7 @@ export default function Home() {
       < Hero />
 
       {/*Projects Section*/}
-      <div className="container py-8 space-y-8 lg:py-16">
+      <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
 
         {/*FFA Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
@@ -82,13 +82,13 @@ export default function Home() {
           <AnimatePresence >
             {clicked ?
               <>
-                < motion.div animate={{width:"100%"}} initial={{width:"0"}} className="order-last lg:order-none">
+                < motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
                   <ImageCard image={sign1} round="rounded-bl-large" />
                 </motion.div>
-                <motion.div animate={{width:"100%"}} initial={{width:"0"}} className="">
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
                   <ImageCard image={sign2} />
                 </motion.div>
-                <motion.div animate={{width:"100%"}} initial={{width:"0"}} className="">
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
                   <ImageCard image={sign3} />
                 </motion.div>
               </>
@@ -109,19 +109,20 @@ export default function Home() {
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display2} />
           </div>
-          {clicked2 &&
-            <>
-              <div className="order-last lg:order-none">
-                <ImageCard image={sign4} round="rounded-bl-large" />
-              </div>
-              <div className="">
-                <ImageCard image={sign5} />
-              </div>
-              <div className="">
-                <ImageCard image={sign6} />
-              </div>
-            </>}
-
+          <AnimatePresence >
+            {clicked2 &&
+              <>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
+                  <ImageCard image={sign4} round="rounded-bl-large" />
+                </motion.div>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
+                  <ImageCard image={sign5} />
+                </motion.div>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
+                  <ImageCard image={sign6} />
+                </motion.div>
+              </>}
+          </AnimatePresence >
         </div>
 
         {/*FAA Project Section*/}
@@ -136,18 +137,20 @@ export default function Home() {
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display3} />
           </div>
+          <AnimatePresence >
           {clicked3 &&
             <>
-              <div className="order-last lg:order-none">
+              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
                 <ImageCard image={sign7} round="rounded-bl-large" />
-              </div>
-              <div className="">
+              </motion.div>
+              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
                 <ImageCard image={sign8} />
-              </div>
-              <div className="">
+              </motion.div>
+              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
                 <ImageCard image={sign9} />
-              </div>
+              </motion.div>
             </>}
+          </AnimatePresence>
         </div>
 
         {/*BYS Project Section*/}
@@ -161,25 +164,26 @@ export default function Home() {
           <div className="order-first lg:col-span-2 lg:order-none">
             < Card2 image={display4} />
           </div>
+          <AnimatePresence >
           {clicked4 &&
             <>
-              <div className="order-last lg:order-none">
+              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
                 <ImageCard image={sign10} round="rounded-bl-large" />
-              </div>
-              <div className="">
+              </motion.div>
+              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
                 <ImageCard image={sign11} />
-              </div>
-              <div className="">
+              </motion.div>
+              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
                 <ImageCard image={sign12} />
-              </div>
+              </motion.div>
             </>
           }
-
+        </AnimatePresence>
         </div>
       </div>
 
       {/*Contact us Section */}
-      <div className="container my-12">
+      <div id="contact" className="container my-12">
         <div className="text-xl font-umbaBold">
           <h2 >In need of our Service</h2>
         </div>
