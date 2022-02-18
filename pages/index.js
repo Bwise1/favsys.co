@@ -225,18 +225,20 @@ export default function Home() {
 
       {/*Footer Section*/}
       <div>
-        <footer className="bg-black text-center lg:text-left text-lg font-umbaThin my-auto">
+        <footer className="bg-black text-sm text-center lg:text-left font-umbaReg my-auto">
           <div className="container text-white gap-4 grid lg:grid-cols-2  py-8">
             <div className="m-auto alignitems-center">
               <p >For more enquiries:</p>
               <p> <a className='' href="mailto:info@favsys.co">info@favsys.co</a> </p>
               <p> <a className='' href="tel:+2348136631392">Call: +234 (0) 813 663 1392</a></p>
-              <p> <a className='' >&copy;favsys, 2022 </a></p>
             </div>
             <div className="flex gap-6 m-auto">
               <p>Instagram</p>
               <p>Twitter</p>
               <p>Linkedin</p>
+            </div>
+            <div className='m-auto alignitems-center lg:col-span-2'>
+              <p> <a className='text-sm' >&copy;favsys, 2022 </a></p>
             </div>
           </div>
         </footer>
