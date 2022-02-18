@@ -30,11 +30,6 @@ import sign10 from "../public/signboards/sign10.png";
 import sign11 from "../public/signboards/sign11.png";
 import sign12 from "../public/signboards/sign12.png";
 
-import profile1 from "../public/profile1.png";
-import profile2 from "../public/profile2.png";
-import profile3 from "../public/profile3.png";
-
-
 export default function Home() {
   const [clicked, setClicked] = useState(false);
   const [clicked2, setClicked2] = useState(false);
@@ -138,18 +133,18 @@ export default function Home() {
             < Card2 image={display3} />
           </div>
           <AnimatePresence >
-          {clicked3 &&
-            <>
-              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
-                <ImageCard image={sign7} round="rounded-bl-large" />
-              </motion.div>
-              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                <ImageCard image={sign8} />
-              </motion.div>
-              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                <ImageCard image={sign9} />
-              </motion.div>
-            </>}
+            {clicked3 &&
+              <>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
+                  <ImageCard image={sign7} round="rounded-bl-large" />
+                </motion.div>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
+                  <ImageCard image={sign8} />
+                </motion.div>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
+                  <ImageCard image={sign9} />
+                </motion.div>
+              </>}
           </AnimatePresence>
         </div>
 
@@ -165,20 +160,20 @@ export default function Home() {
             < Card2 image={display4} />
           </div>
           <AnimatePresence >
-          {clicked4 &&
-            <>
-              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
-                <ImageCard image={sign10} round="rounded-bl-large" />
-              </motion.div>
-              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                <ImageCard image={sign11} />
-              </motion.div>
-              <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                <ImageCard image={sign12} />
-              </motion.div>
-            </>
-          }
-        </AnimatePresence>
+            {clicked4 &&
+              <>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
+                  <ImageCard image={sign10} round="rounded-bl-large" />
+                </motion.div>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
+                  <ImageCard image={sign11} />
+                </motion.div>
+                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
+                  <ImageCard image={sign12} />
+                </motion.div>
+              </>
+            }
+          </AnimatePresence>
         </div>
       </div>
 
@@ -193,17 +188,29 @@ export default function Home() {
       {/*Testimonial Section*/}
       <div className="bg-favsent/[0.7] py-8">
         <div className="flex">
-          <p className="title">Testimonial</p>
+          <p className="title">OUR EXPERTISE</p>
         </div>
-        <div className="container grid grid-cols-1 gap-10 py-8 lg:grid-cols-3">
+        <div className="container grid grid-cols-1 gap-10 py-8 font-umbaReg lg:grid-cols-3">
           <div className="m-auto">
-            <TProfileCard image={profile1} />
+            <p>Brand Identity</p>
+            <p>Brand Strategy</p>
+            <p>Brand Naming</p>
+            <p>Brand Guidelines</p>
+            <p>Brand Branding</p>
           </div>
           <div className="m-auto">
-            <TProfileCard image={profile2} />
+            <p>UI/UX (Product Design)</p>
+            <p>Web Development</p>
+            <p>Campaign Ads</p>
+            <p>Publications & Editorial Design</p>
+            <p>Social Media Design</p>
           </div>
           <div className="m-auto">
-            <TProfileCard image={profile3} />
+            <p>Design Printing & Production</p>
+            <p>Brand Management (Retainer)</p>
+            <p>Content</p>
+            <p>Motion and Graphic Design</p>
+            <p>Copy Writing</p>
           </div>
         </div>
       </div>
@@ -218,12 +225,13 @@ export default function Home() {
 
       {/*Footer Section*/}
       <div>
-        <footer className="bg-black text-center lg:text-left text-lg font-umbaReg my-auto">
+        <footer className="bg-black text-center lg:text-left text-lg font-umbaThin my-auto">
           <div className="container text-white gap-4 grid lg:grid-cols-2  py-8">
             <div className="m-auto alignitems-center">
               <p >For more enquiries:</p>
               <p> <a className='' href="mailto:info@favsys.co">info@favsys.co</a> </p>
               <p> <a className='' href="tel:+2348136631392">Call: +234 (0) 813 663 1392</a></p>
+              <p> <a className='' >&copy;favsys, 2022 </a></p>
             </div>
             <div className="flex gap-6 m-auto">
               <p>Instagram</p>
