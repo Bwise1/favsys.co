@@ -24,29 +24,19 @@ export default function Header() {
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <Link
                                         className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        to="home"
                                         activeClass="Home"
                                         href="/"
                                         smooth={true}
                                         offset={50}
                                         duration={500}
-
                                     >
                                         Home
                                     </Link>
+
                                     <Link
-                                        activeClass="about"
-                                        to="about"
-                                        href="/#projects"
-                                        smooth={true}
-                                        offset={50}
-                                        duration={500}
-                                        className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        About
-                                    </Link>
-                                    <Link
-                                        activeClass="work"
-                                        to="work"
+                                        activeClass="projects"
+                                        to="projects"
                                         href="/#projects"
                                         smooth={true}
                                         offset={50}
@@ -58,8 +48,8 @@ export default function Header() {
 
                                     <Link
                                         activeClass="Services"
-                                        to="work"
-                                        href="/"
+                                        to="services"
+                                        href="/#services"
                                         smooth={true}
                                         offset={50}
                                         duration={500}
@@ -86,26 +76,16 @@ export default function Header() {
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className="bg-blue-600 inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+                                className=" inline-flex items-center justify-center p-2 rounded-md text-black text-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-buttonPaint focus:ring-white"
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >
                                 <span className="sr-only">Open main menu</span>
                                 {!isOpen ? (
-                                    <svg
-                                        className="block h-6 w-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M4 6h16M4 12h16M4 18h16"
-                                        />
+                                    <svg width="30" height="29" viewBox="0 0 41 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0.875H34.8571C37.6186 0.875 39.8571 3.11358 39.8571 5.875V7.14286H12V0.875Z" fill="black" />
+                                        <path d="M0 12.0178H40.3929V18.9821H0V12.0178Z" fill="black" />
+                                        <path d="M0 23.8572H40.3929V30.125H5C2.23858 30.125 0 27.8865 0 25.125V23.8572Z" fill="black" />
                                     </svg>
                                 ) : (
                                     <svg
@@ -139,7 +119,7 @@ export default function Header() {
                     leaveTo="opacity-0 scale-95"
                 >
 
-                    <div className="md:hidden" id="mobile-menu">
+                    <div className="md:hidden font-umbaMedium" id="mobile-menu">
 
                         <Link
                             href="/home"
@@ -148,55 +128,56 @@ export default function Header() {
                             smooth={true}
                             offset={50}
                             duration={500}
-                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base "
                         >
                             Home
                         </Link>
                         <Link
-                            href="/about"
-                            activeClass="about"
-                            to="about"
+                            href="/#projects"
+                            activeClass="projects"
+                            to="projects"
                             smooth={true}
                             offset={50}
                             duration={500}
-                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            About
-                        </Link>
-
-                        <Link
-                            href="/work"
-                            activeClass="work"
-                            to="work"
-                            smooth={true}
-                            offset={50}
-                            duration={500}
-                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >
                             Projects
                         </Link>
+
                         <Link
-                            href="/services"
+                            href="/#services"
                             activeClass="services"
                             to="services"
                             smooth={true}
                             offset={50}
                             duration={500}
-                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >
                             Services
                         </Link>
 
                         <Link
-                            href="/contact"
-                            activeClass="work"
-                            to="work"
+                            href="/#contact"
+                            activeClass="contact"
+                            to="contact"
                             smooth={true}
                             offset={50}
                             duration={500}
-                            className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >
                             Contact
+                        </Link>
+
+                        <Link
+                            href="/#clients"
+                            activeClass="clients"
+                            to="clients"
+                            smooth={true}
+                            offset={50}
+                            duration={500}
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
+                        >
+                            Clients
                         </Link>
                     </div>
 

@@ -61,7 +61,7 @@ export default function Home() {
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
 
         {/*FFA Project Section*/}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 lg:gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="FFA - Funke Felix-Adejumo"
@@ -69,7 +69,7 @@ export default function Home() {
               handleClick={btnClicked}
             />
           </div>
-          <div className="order-first md:col-span-2 md:order-none lg:col-span-2 lg:order-none ">
+          <div className="order-first lg:col-span-2 lg:order-none ">
             < Card2 image={display} />
           </div>
 
@@ -186,7 +186,7 @@ export default function Home() {
       </div>
 
       {/*Testimonial Section*/}
-      <div className="bg-favsent/[0.7] py-8">
+      <div id="services" className="bg-favsent/[0.7] py-8">
         <div className="flex">
           <p className="title">OUR EXPERTISE</p>
         </div>
