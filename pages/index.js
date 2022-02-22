@@ -61,7 +61,7 @@ export default function Home() {
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
 
         {/*FFA Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <motion.div initial={{x: '-100vw'}} animate={{x: 0}} transition={{type: 'spring', duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="FFA - Funke Felix-Adejumo"
@@ -90,10 +90,10 @@ export default function Home() {
               : null}
           </AnimatePresence>
 
-        </div>
+        </motion.div>
 
         {/*Isolated Paint Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <motion.div initial={{x: '-100vw'}} animate={{x: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="Isolated Paint"
@@ -118,7 +118,7 @@ export default function Home() {
                 </motion.div>
               </>}
           </AnimatePresence >
-        </div>
+        </motion.div>
 
         {/*FAA Project Section*/}
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
