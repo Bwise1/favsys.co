@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -17,7 +17,16 @@ export default function Contact() {
     };
 
     const handleSubmit = e => {
+        e.preventDefault();
         console.log("submitted");
+
+        let data = {
+            name,
+            organization,
+            number,
+            email,
+            message
+        }
     }
 
     return (
@@ -28,7 +37,7 @@ export default function Contact() {
                         <input className="contact-input placeholder:font-umbaReg" name="email" type="name" id="email" placeholder="Name" required  value={formData.name}/>
                     </div>
                     <div>
-                        <input className="contact-input placeholder:font-umbaReg" type="text" id="org" placeholder="Organization" required value={formDate.organization}/>
+                        <input className="contact-input placeholder:font-umbaReg" type="text" id="org" placeholder="Organization" required value={formData.organization}/>
                     </div>
                     <div>
                         <input className="contact-input placeholder:font-umbaReg" type="tel" id="tel" placeholder="Phone Number" required value={formData.number}/>
