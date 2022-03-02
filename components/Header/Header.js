@@ -7,14 +7,27 @@ import Logo from "../../public/logo.svg";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [colorChange, setColorchange] = useState(false);
+
+    const changeNavbarColor = () =>{
+        if(window.scrollY >= 80){
+          setColorchange(true);
+        }
+        else{
+          setColorchange(false);
+        }
+     };
+     if (typeof window !== "undefined") {
+        window.addEventListener('scroll', changeNavbarColor);
+     }
     return (
         <div>
-            <nav className=" shadow-sm scroll: fixed w-full bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 z-10">
+            <nav className= {"shadow-sm fixed w-full backdrop-filter backdrop-blur-lg bg-opacity-50 z-10 " +(colorChange? "bg-white":"bg-inherit")}>
                 <div className="w-full">
                     <div className="flex items-center container m-auto font-umbaMedium h-20 w-full">
                         <div className="flex items-center justify-between w-full">
                             <div className="flex items-center space-x-5 mt-4">
-                                <Link href="/">
+                                <Link href="/" to="home">
                                     <a>
                                         <Image className="cursor-pointer" src={Logo} alt="Logo" height={39} width={123} />
                                     </a>
@@ -69,10 +82,21 @@ export default function Header() {
                                     >
                                         Contact
                                     </Link>
+                                    <Link
+                                        activeClass="clients"
+                                        to="clients"
+                                        href="/#clients"
+                                        smooth={true}
+                                        offset={50}
+                                        duration={500}
+                                        className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        Clients
+                                    </Link>
                                 </div>
                             </div>
                         </div>
-                        <div className=" flex md:hidden ">
+                        <div className="flex md:hidden ">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
@@ -137,7 +161,7 @@ export default function Header() {
                             activeClass="projects"
                             to="projects"
                             smooth={true}
-                            offset={50}
+                            offset={-80}
                             duration={500}
                             className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >

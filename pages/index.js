@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -52,6 +53,8 @@ export default function Home() {
     setClicked4(!clicked4);
   }
 
+  const {ref, inView} = useInView();
+
   return (
     <div className="relative bg-white overflow-hidden">
       < Header />
@@ -61,7 +64,7 @@ export default function Home() {
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
 
         {/*FFA Project Section*/}
-        <motion.div initial={{x: '-100vw'}} animate={{x: 0}} transition={{type: 'spring', duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="FFA - Funke Felix-Adejumo"
@@ -188,7 +191,7 @@ export default function Home() {
       {/*Testimonial Section*/}
       <div id="services" className="bg-favsent/[0.7] py-8">
         <div className="flex">
-          <p className="title">OUR EXPERTISE</p>
+          <p className="title">OUR Services</p>
         </div>
         <div className="container grid grid-cols-1 gap-10 py-8 text-center font-umbaReg lg:grid-cols-3">
           <div className="m-auto ">
@@ -196,7 +199,7 @@ export default function Home() {
             <p>Brand Strategy</p>
             <p>Brand Naming</p>
             <p>Brand Guidelines</p>
-            <p>Brand Branding</p>
+            <p>Event Branding</p>
           </div>
           <div className="m-auto">
             <p>UI/UX (Product Design)</p>
