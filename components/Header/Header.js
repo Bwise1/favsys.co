@@ -9,7 +9,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-            <nav className=" shadow-sm fixed w-full  z-10">
+            <nav className=" shadow-sm scroll: fixed w-full bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 z-10">
                 <div className="w-full">
                     <div className="flex items-center container m-auto font-umbaMedium h-20 w-full">
                         <div className="flex items-center justify-between w-full">

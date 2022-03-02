@@ -8,6 +8,7 @@ export default function Contact() {
         email: '',
         message: ''
     });
+    const [submitted, setSubmitted] = useState(false);
 
     const handleFieldChange = e =>{
         setFormData({
@@ -20,13 +21,23 @@ export default function Contact() {
         e.preventDefault();
         console.log("submitted");
 
-        let data = {
-            name,
-            organization,
-            number,
-            email,
-            message
-        }
+        let data = formData;
+        console.log(data);
+
+        fetch('/api/contact',{
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then((res) => {
+            console.log('Response received')
+            if(res.status === 200){
+                console.log("Response succeeded!");
+                setSubmitted(true);
+            }
+        })
     }
 
     return (
@@ -34,22 +45,22 @@ export default function Contact() {
             <form>
                 <div className='grid gap-y-6 gap-x-16 py-8 font-umbaReg'>
                     <div className="">
-                        <input className="contact-input placeholder:font-umbaReg" name="email" type="name" id="email" placeholder="Name" required  value={formData.name}/>
+                        <input className="contact-input" name="name" type="name" id="email" placeholder="Name" required  onChange={handleFieldChange} value={formData.name}/>
                     </div>
                     <div>
-                        <input className="contact-input placeholder:font-umbaReg" type="text" id="org" placeholder="Organization" required value={formData.organization}/>
+                        <input className="contact-input" name="organization" type="text" id="org" placeholder="Organization" onChange={handleFieldChange} required value={formData.organization}/>
                     </div>
                     <div>
-                        <input className="contact-input placeholder:font-umbaReg" type="tel" id="tel" placeholder="Phone Number" required value={formData.number}/>
+                        <input className="contact-input" name="number" type="tel" id="tel" placeholder="Phone Number" onChange={handleFieldChange} required value={formData.number}/>
                     </div>
                     <div>
-                        <input className="contact-input placeholder:font-umbaReg" type="email" id="email" placeholder="Work Email" required value={formData.email}/>
+                        <input className="contact-input" name="email" type="email" id="email" onChange={handleFieldChange} placeholder="Work Email" required value={formData.email}/>
                     </div>
                     <div className='lg:col-span-2'>
-                        <input className="contact-input placeholder:font-umbaReg" type="text" id="message" placeholder="Message" required value={formData.message}/>
+                        <input className="contact-input" name="message" type="text" id="message" placeholder="Message" onChange={handleFieldChange} required value={formData.message}/>
                     </div>
                     <div>
-                        <button className='button py-2 px-4'>Submit</button>
+                        <button onClick={(e)=>{handleSubmit(e)}} className='button py-2 px-4'>Submit</button>
                     </div>
                 </div>
             </form>
