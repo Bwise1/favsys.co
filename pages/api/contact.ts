@@ -4,17 +4,17 @@ export default function (req, res) {
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
         port: 465,
-        host: "smtp.gmail.com",
+        host: "smtp.mailgun.org",
         auth: {
             user: process.env.username,
             pass: process.env.password,
         },
         secure: true,
-        //logger: true,
-        //debug: true
+        logger: true,
+        debug: true
     })
     const mailData = {
-        from: 'demo email',
+        from: 'info@favsys.co',
         to: 'oguntoyebenjamin2@gmail.com',
         subject: `Message From ${req.body.name}`,
         text: req.body.message + " | Sent from: " + req.body.email,

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import Header from "../components/Header";
@@ -54,6 +54,21 @@ export default function Home() {
   }
 
   const {ref, inView} = useInView();
+  const animation = useAnimation();
+  useEffect(() => {
+    if(inView){
+      animation.start({
+        y: 0,
+        transition: {
+          type: 'spring', duration: 1, bounce: 0.3
+        }
+      });
+    }
+    if(!inView){
+      animation.start({y: '+10vw'});
+    }
+    console.log("use effect hook, inView = ",inView);
+  });
 
   return (
     <div className="relative bg-white overflow-hidden">
@@ -64,7 +79,7 @@ export default function Home() {
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
 
         {/*FFA Project Section*/}
-        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <motion.div ref={ref} animate={animation} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="FFA - Funke Felix-Adejumo"
@@ -96,7 +111,7 @@ export default function Home() {
         </motion.div>
 
         {/*Isolated Paint Project Section*/}
-        <motion.div initial={{x: '-100vw'}} animate={{x: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="Isolated Paint"
@@ -124,7 +139,7 @@ export default function Home() {
         </motion.div>
 
         {/*FAA Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="FAA - Felix Aderemi Adejumo"
@@ -149,10 +164,10 @@ export default function Home() {
                 </motion.div>
               </>}
           </AnimatePresence>
-        </div>
+        </motion.div>
 
         {/*BYS Project Section*/}
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2 md:">
+        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}}className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2 md:">
           <div className="">
             < Card1
               heading="BYS - Beyond Your Scars"
@@ -177,7 +192,7 @@ export default function Home() {
               </>
             }
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
 
       {/*Contact us Section */}
