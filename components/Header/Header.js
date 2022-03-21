@@ -9,20 +9,20 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [colorChange, setColorchange] = useState(false);
 
-    const changeNavbarColor = () =>{
-        if(window.scrollY >= 80){
-          setColorchange(true);
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 80) {
+            setColorchange(true);
         }
-        else{
-          setColorchange(false);
+        else {
+            setColorchange(false);
         }
-     };
-     if (typeof window !== "undefined") {
+    };
+    if (typeof window !== "undefined") {
         window.addEventListener('scroll', changeNavbarColor);
-     }
+    }
     return (
         <div>
-            <nav className= {"shadow-sm fixed w-full backdrop-filter backdrop-blur-lg bg-opacity-50 z-10 " +(colorChange? "bg-white":"bg-inherit")}>
+            <nav className={"shadow-sm fixed w-full backdrop-filter backdrop-blur-lg bg-opacity-50 z-10 " + (colorChange ? "bg-white" : "bg-inherit")}>
                 <div className="w-full">
                     <div className="flex items-center container m-auto font-umbaMedium h-20 w-full">
                         <div className="flex items-center justify-between w-full">
@@ -38,7 +38,7 @@ export default function Header() {
                                     <Link
                                         className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                         to="home"
-                                        activeClass="Home"
+                                        activeClass="actives"
                                         href="/"
                                         smooth={true}
                                         offset={50}
@@ -112,21 +112,11 @@ export default function Header() {
                                         <path d="M0 23.8572H40.3929V30.125H5C2.23858 30.125 0 27.8865 0 25.125V23.8572Z" fill="black" />
                                     </svg>
                                 ) : (
-                                    <svg
-                                        className="block h-6 w-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M6 18L18 6M6 6l12 12"
-                                        />
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 6L23.5364 20.5364L21.0301 23.0427L6.49372 8.50628L9 6Z" fill="black" />
+                                        <path d="M5.74463 20.7444L20.281 6.20796L22.5367 8.46362L8.00028 23L5.74463 20.7444Z" fill="black" />
                                     </svg>
+
                                 )}
                             </button>
                         </div>
@@ -143,7 +133,7 @@ export default function Header() {
                     leaveTo="opacity-0 scale-95"
                 >
 
-                    <div className="md:hidden font-umbaMedium" id="mobile-menu">
+                    <div className="md:hidden font-umbaMedium " id="mobile-menu">
 
                         <Link
                             href="/home"
@@ -152,6 +142,7 @@ export default function Header() {
                             smooth={true}
                             offset={50}
                             duration={500}
+                            onClick={() => setIsOpen(!isOpen)}
                             className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base "
                         >
                             Home
@@ -163,6 +154,7 @@ export default function Header() {
                             smooth={true}
                             offset={-80}
                             duration={500}
+                            onClick={() => setIsOpen(!isOpen)}
                             className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >
                             Projects
@@ -173,8 +165,9 @@ export default function Header() {
                             activeClass="services"
                             to="services"
                             smooth={true}
-                            offset={50}
+                            offset={-80}
                             duration={500}
+                            onClick={() => setIsOpen(!isOpen)}
                             className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >
                             Services
@@ -185,8 +178,9 @@ export default function Header() {
                             activeClass="contact"
                             to="contact"
                             smooth={true}
-                            offset={50}
+                            offset={-80}
                             duration={500}
+                            onClick={() => setIsOpen(!isOpen)}
                             className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >
                             Contact
@@ -197,8 +191,9 @@ export default function Header() {
                             activeClass="clients"
                             to="clients"
                             smooth={true}
-                            offset={50}
+                            offset={-80}
                             duration={500}
+                            onClick={() => setIsOpen(!isOpen)}
                             className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
                         >
                             Clients

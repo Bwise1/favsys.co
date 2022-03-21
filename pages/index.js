@@ -10,6 +10,7 @@ import ImageCard from "../components/Cards/ImageCard";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
 import Clients from "../components/Client";
+import Project from "../components/Project/Project";
 
 import display from '../public/display.png';
 import sign1 from "../public/signboards/sign1.png";
@@ -54,6 +55,7 @@ export default function Home() {
   }
 
   const {ref, inView} = useInView();
+
   const animation = useAnimation();
   useEffect(() => {
     if(inView){
@@ -77,7 +79,8 @@ export default function Home() {
 
       {/*Projects Section*/}
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
-
+        {/* <Project />
+        <Project /> */}
         {/*FFA Project Section*/}
         <motion.div ref={ref} animate={animation} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
@@ -111,7 +114,7 @@ export default function Home() {
         </motion.div>
 
         {/*Isolated Paint Project Section*/}
-        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
+        <motion.div ref={ref} animate={animation} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
           <div className="">
             < Card1
               heading="Isolated Paint"
