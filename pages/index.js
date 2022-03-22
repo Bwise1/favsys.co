@@ -79,6 +79,7 @@ export default function Home() {
 
       {/*Projects Section*/}
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
+        <Project heading="Mama Funke" text={"hello ma"} banner={display} image1={sign1} image2={sign2} image3={sign3}/>
         {/* <Project />
         <Project /> */}
         {/*FFA Project Section*/}
