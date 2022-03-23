@@ -4,45 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import Card1 from "../../components/Cards/Card1";
 import Card2 from "../../components/Cards/Card2";
 import ImageCard from "../../components/Cards/ImageCard";
-import display from '../../public/display.png';
-import sign1 from "../../public/signboards/sign1.png";
-import sign2 from "../../public/signboards/sign2.png";
-import sign3 from "../../public/signboards/sign3.png";
 
-const projectsData =[
-    {
-        heading: "FFA - Funke Felix-Adejumo",
-        text: "Funke Felix-Adejumo is the President of the Funke Felix-Adejumo Foundation. She is a Certified Transformational Coach, Executive Coach and an Itinerant Preacher.",
-        banner: "",
-        image1: "",
-        image2: "",
-        image3: "",
-    },
-    {
-        heading: "Isolated Paint",
-        text: "Isolated Paints is a paint producing company located in South-Eastern Nigeria with the aim of providing quality paints and also encouraging nature conserving products.",
-        banner: "",
-        image1: "",
-        image2: "",
-        image3: "",
-    },
-    {
-        heading: "FAA - Felix Aderemi Adejumo",
-        text: "Felix Aderemi Adejumo is the Founder and Senior Pastor of The Agape Christian Ministries Worldwide. He is an anointed preacher of the gospel, a marriage and leadership coach and a Book writer, having authored quite a number of books.",
-        banner: "",
-        image1: "",
-        image2: "",
-        image3: "",
-    },
-    {
-        heading: "BYS - Beyond Your Scars",
-        text: "BYS is an international establishment committed to raising a young generation of kingdom driven influencers and transformational leaders who have risen above their past traumas or life conditions and serve as standard bearers in their communities and around the globe.",
-        banner: "",
-        image1: "",
-        image2: "",
-        image3: "",
-    },
-]
 export default function Project(props) {
     const [clicked, setClicked] = useState(false);
     const { ref, inView } = useInView();

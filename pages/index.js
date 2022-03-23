@@ -10,27 +10,27 @@ import ImageCard from "../components/Cards/ImageCard";
 import Contact from "../components/Forms/Contact";
 import TProfileCard from "../components/Cards/TProfileCard";
 import Clients from "../components/Client";
-import Project from "../components/Project/Project";
+import Projects from "../components/Project/Projects";
 
-import display from '../public/display.png';
-import sign1 from "../public/signboards/sign1.png";
-import sign2 from "../public/signboards/sign2.png";
-import sign3 from "../public/signboards/sign3.png";
+// import display from '../public/display.png';
+// import sign1 from "../public/signboards/sign1.png";
+// import sign2 from "../public/signboards/sign2.png";
+// import sign3 from "../public/signboards/sign3.png";
 
-import display2 from '../public/display2.png';
-import sign4 from "../public/signboards/sign4.png";
-import sign5 from "../public/signboards/sign5.png";
-import sign6 from "../public/signboards/sign6.png";
+// import display2 from '../public/display2.png';
+// import sign4 from "../public/signboards/sign4.png";
+// import sign5 from "../public/signboards/sign5.png";
+// import sign6 from "../public/signboards/sign6.png";
 
-import display3 from '../public/display3.png';
-import sign7 from "../public/signboards/sign7.png";
-import sign8 from "../public/signboards/sign8.png";
-import sign9 from "../public/signboards/sign9.png";
+// import display3 from '../public/display3.png';
+// import sign7 from "../public/signboards/sign7.png";
+// import sign8 from "../public/signboards/sign8.png";
+// import sign9 from "../public/signboards/sign9.png";
 
-import display4 from '../public/display4.png';
-import sign10 from "../public/signboards/sign10.png";
-import sign11 from "../public/signboards/sign11.png";
-import sign12 from "../public/signboards/sign12.png";
+// import display4 from '../public/display4.png';
+// import sign10 from "../public/signboards/sign10.png";
+// import sign11 from "../public/signboards/sign11.png";
+// import sign12 from "../public/signboards/sign12.png";
 
 export default function Home() {
   const [clicked, setClicked] = useState(false);
@@ -79,124 +79,8 @@ export default function Home() {
 
       {/*Projects Section*/}
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
-        <Project heading="Mama Funke" text={"hello ma"} banner={display} image1={sign1} image2={sign2} image3={sign3}/>
-        {/* <Project />
-        <Project /> */}
-        {/*FFA Project Section*/}
-        <motion.div ref={ref} animate={animation} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
-          <div className="">
-            < Card1
-              heading="FFA - Funke Felix-Adejumo"
-              text="Funke Felix-Adejumo is the President of the Funke Felix-Adejumo Foundation. She is a Certified Transformational Coach, Executive Coach and an Itinerant Preacher."
-              handleClick={btnClicked}
-            />
-          </div>
-          <div className="order-first lg:col-span-2 lg:order-none ">
-            < Card2 image={display} />
-          </div>
+        <Projects />
 
-          {/*Temp fix for annimate presense*/}
-          <AnimatePresence >
-            {clicked ?
-              <>
-                < motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
-                  <ImageCard image={sign1} round="rounded-bl-large" />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign2} />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign3} />
-                </motion.div>
-              </>
-              : null}
-          </AnimatePresence>
-
-        </motion.div>
-
-        {/*Isolated Paint Project Section*/}
-        <motion.div ref={ref} animate={animation} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
-          <div className="">
-            < Card1
-              heading="Isolated Paint"
-              text="Isolated Paints is a paint producing company located in South-Eastern Nigeria with the aim of providing quality paints and also encouraging nature conserving products."
-              handleClick={btnClicked2}
-            />
-          </div>
-          <div className="order-first lg:col-span-2 lg:order-none">
-            < Card2 image={display2} />
-          </div>
-          <AnimatePresence >
-            {clicked2 &&
-              <>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
-                  <ImageCard image={sign4} round="rounded-bl-large" />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign5} />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign6} />
-                </motion.div>
-              </>}
-          </AnimatePresence >
-        </motion.div>
-
-        {/*FAA Project Section*/}
-        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}} className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2">
-          <div className="">
-            < Card1
-              heading="FAA - Felix Aderemi Adejumo"
-              text="Felix Aderemi Adejumo is the Founder and Senior Pastor of The Agape Christian Ministries Worldwide. He is an anointed preacher of the gospel, a marriage and leadership coach and a Book writer, having authored quite a number of books."
-              handleClick={btnClicked3}
-            />
-          </div>
-          <div className="order-first lg:col-span-2 lg:order-none">
-            < Card2 image={display3} />
-          </div>
-          <AnimatePresence >
-            {clicked3 &&
-              <>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
-                  <ImageCard image={sign7} round="rounded-bl-large" />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign8} />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign9} />
-                </motion.div>
-              </>}
-          </AnimatePresence>
-        </motion.div>
-
-        {/*BYS Project Section*/}
-        <motion.div initial={{y: '+100vw'}} animate={{y: 0}} transition={{type: 'spring', delay: 0.5, duration: 1, bounce: 0.3}}className="grid grid-cols-1 lg:grid-cols-3 lg:gap-2 md:">
-          <div className="">
-            < Card1
-              heading="BYS - Beyond Your Scars"
-              text="BYS is an international establishment committed to raising a young generation of kingdom driven influencers and transformational leaders who have risen above their past traumas or life conditions and serve as standard bearers in their communities and around the globe."
-              handleClick={btnClicked4} />
-          </div>
-          <div className="order-first lg:col-span-2 lg:order-none">
-            < Card2 image={display4} />
-          </div>
-          <AnimatePresence >
-            {clicked4 &&
-              <>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="order-last lg:order-none">
-                  <ImageCard image={sign10} round="rounded-bl-large" />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign11} />
-                </motion.div>
-                <motion.div animate={{ width: "100%" }} initial={{ width: "0" }} className="">
-                  <ImageCard image={sign12} />
-                </motion.div>
-              </>
-            }
-          </AnimatePresence>
-        </motion.div>
       </div>
 
       {/*Contact us Section */}
