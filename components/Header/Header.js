@@ -106,7 +106,7 @@ export default function Header() {
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className=" inline-flex items-center justify-center p-2 rounded-md text-black text-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-buttonPaint focus:ring-white"
+                                className=" inline-flex items-center justify-center p-2 rounded-md text-black text-2xl "
                                 aria-controls="mobile-menu"
                                 aria-expanded="false"
                             >
@@ -148,7 +148,7 @@ export default function Header() {
                             smooth={true}
                             duration={500}
                             onClick={() => setIsOpen(!isOpen)}
-                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base "
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-center text-base"
                         >
                             Home
                         </Link>
@@ -161,7 +161,7 @@ export default function Header() {
                             offset={-80}
                             duration={500}
                             onClick={() => setIsOpen(!isOpen)}
-                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-center text-base"
                         >
                             Projects
                         </Link>
@@ -175,7 +175,7 @@ export default function Header() {
                             offset={-80}
                             duration={500}
                             onClick={() => setIsOpen(!isOpen)}
-                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-center text-base"
                         >
                             Contact
                         </Link>
@@ -189,7 +189,7 @@ export default function Header() {
                             offset={-80}
                             duration={500}
                             onClick={() => setIsOpen(!isOpen)}
-                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-center text-base"
                         >
                             Services
                         </Link>
@@ -203,7 +203,7 @@ export default function Header() {
                             offset={-80}
                             duration={500}
                             onClick={() => setIsOpen(!isOpen)}
-                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-center text-base"
                         >
                             Clients
                         </Link>
