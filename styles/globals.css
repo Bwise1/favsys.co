@@ -10,6 +10,10 @@
     @apply border-b font-umbaReg border-black/[0.5] w-full focus:outline-none;
 }
 
+.active{
+    @apply bg-buttonPaint;
+}
+
 .button{
     @apply motion-safe:hover:-translate-x-0.5 motion-safe:transition align-middle bg-buttonPaint text-white font-umbaMedium uppercase text-xs rounded-full hover:bg-buttonPaint/[0.5] transition duration-300 ease-in-out focus:outline-none;
 }
@@ -27,7 +31,7 @@
         font-style: normal;
         font-display: swap;
     }
-    
+
     @font-face {
         font-family: 'Umba Soft Bold';
         src: local('Umba Soft Bold'), local('UmbaSoft-Bold'),
@@ -45,7 +49,7 @@
         font-style: normal;
         font-display: swap;
     }
-    
+
     @font-face {
         font-family: 'Umba Soft Light Italic';
         src: local('Umba Soft Light Italic'), local('UmbaSoft-LightItalic'),
@@ -55,7 +59,7 @@
         font-display: swap;
     }
 
-    
+
     @font-face {
         font-family: 'Umba Soft Italic';
         src: local('Umba Soft Italic'), local('UmbaSoft-Italic'),
@@ -64,7 +68,7 @@
         font-style: italic;
         font-display: swap;
     }
- 
+
     @font-face {
         font-family: 'Umba Soft Medium Italic';
         src: local('Umba Soft Medium Italic'), local('UmbaSoft-MediumItalic'),
@@ -73,7 +77,7 @@
         font-style: italic;
         font-display: swap;
     }
-  
+
     @font-face {
         font-family: 'Umba Soft Bold Italic';
         src: local('Umba Soft Bold Italic'), local('UmbaSoft-BoldItalic'),
@@ -82,7 +86,7 @@
         font-style: italic;
         font-display: swap;
     }
-    
+
     @font-face {
         font-family: 'Umba Soft Light';
         src: local('Umba Soft Light'), local('UmbaSoft-Light'),
@@ -91,7 +95,7 @@
         font-style: normal;
         font-display: swap;
     }
-    
+
     @font-face {
         font-family: 'Umba Soft Thin';
         src: local('Umba Soft Thin'), local('UmbaSoft-Thin'),
@@ -100,7 +104,7 @@
         font-style: normal;
         font-display: swap;
     }
-  
+
     @font-face {
         font-family: 'Umba Soft Thin Italic';
         src: local('Umba Soft Thin Italic'), local('UmbaSoft-ThinItalic'),

@@ -21,7 +21,7 @@ export default function Header() {
         window.addEventListener('scroll', changeNavbarColor);
     }
     return (
-        <div>
+        <div id="home">
             <nav className={"shadow-sm fixed w-full backdrop-filter backdrop-blur-lg bg-opacity-50 z-10 " + (colorChange ? "bg-white" : "bg-inherit")}>
                 <div className="w-full">
                     <div className="flex items-center container m-auto font-umbaMedium h-20 w-full">
@@ -37,8 +37,9 @@ export default function Header() {
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <Link
                                         className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        spy={true}
                                         to="home"
-                                        activeClass="actives"
+                                        activeClass="active"
                                         href="/"
                                         smooth={true}
                                         offset={50}
@@ -48,11 +49,12 @@ export default function Header() {
                                     </Link>
 
                                     <Link
-                                        activeClass="projects"
+                                        activeClass="active"
+                                        spy={true}
                                         to="projects"
                                         href="/#projects"
                                         smooth={true}
-                                        offset={50}
+                                        offset={-80}
                                         duration={500}
                                         className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
@@ -60,11 +62,25 @@ export default function Header() {
                                     </Link>
 
                                     <Link
-                                        activeClass="Services"
+                                        activeClass="active"
+                                        spy
+                                        to="contact"
+                                        href="/#contact"
+                                        smooth={true}
+                                        offset={-80}
+                                        duration={500}
+                                        className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                    >
+                                        Contact
+                                    </Link>
+
+                                    <Link
+                                        activeClass="active"
+                                        spy
                                         to="services"
                                         href="/#services"
                                         smooth={true}
-                                        offset={50}
+                                        offset={-80}
                                         duration={500}
                                         className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
@@ -72,22 +88,12 @@ export default function Header() {
                                     </Link>
 
                                     <Link
-                                        activeClass="contact"
-                                        to="contact"
-                                        href="/#contact"
-                                        smooth={true}
-                                        offset={50}
-                                        duration={500}
-                                        className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Contact
-                                    </Link>
-                                    <Link
-                                        activeClass="clients"
+                                        activeClass="active"
+                                        spy
                                         to="clients"
                                         href="/#clients"
                                         smooth={true}
-                                        offset={50}
+                                        offset={-80}
                                         duration={500}
                                         className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
@@ -137,10 +143,9 @@ export default function Header() {
 
                         <Link
                             href="/home"
-                            activeClass="home"
+                            activeClass="active"
                             to="home"
                             smooth={true}
-                            offset={50}
                             duration={500}
                             onClick={() => setIsOpen(!isOpen)}
                             className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base "
@@ -149,7 +154,8 @@ export default function Header() {
                         </Link>
                         <Link
                             href="/#projects"
-                            activeClass="projects"
+                            activeClass="active"
+                            spy
                             to="projects"
                             smooth={true}
                             offset={-80}
@@ -161,21 +167,9 @@ export default function Header() {
                         </Link>
 
                         <Link
-                            href="/#services"
-                            activeClass="services"
-                            to="services"
-                            smooth={true}
-                            offset={-80}
-                            duration={500}
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
-                        >
-                            Services
-                        </Link>
-
-                        <Link
                             href="/#contact"
-                            activeClass="contact"
+                            activeClass="active"
+                            spy
                             to="contact"
                             smooth={true}
                             offset={-80}
@@ -187,8 +181,23 @@ export default function Header() {
                         </Link>
 
                         <Link
+                            href="/#services"
+                            activeClass="active"
+                            spy
+                            to="services"
+                            smooth={true}
+                            offset={-80}
+                            duration={500}
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="cursor-pointer hover:bg-buttonPaint text-black hover:text-white block px-3 py-2 rounded-md text-base"
+                        >
+                            Services
+                        </Link>
+
+                        <Link
                             href="/#clients"
-                            activeClass="clients"
+                            activeClass="active"
+                            spy
                             to="clients"
                             smooth={true}
                             offset={-80}

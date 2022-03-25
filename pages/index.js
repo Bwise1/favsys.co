@@ -1,86 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-
+import React from 'react';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Card1 from "../components/Cards/Card1";
-import Card2 from "../components/Cards/Card2";
-import ImageCard from "../components/Cards/ImageCard";
 import Contact from "../components/Forms/Contact";
-import TProfileCard from "../components/Cards/TProfileCard";
 import Clients from "../components/Client";
 import Projects from "../components/Project/Projects";
 
-// import display from '../public/display.png';
-// import sign1 from "../public/signboards/sign1.png";
-// import sign2 from "../public/signboards/sign2.png";
-// import sign3 from "../public/signboards/sign3.png";
-
-// import display2 from '../public/display2.png';
-// import sign4 from "../public/signboards/sign4.png";
-// import sign5 from "../public/signboards/sign5.png";
-// import sign6 from "../public/signboards/sign6.png";
-
-// import display3 from '../public/display3.png';
-// import sign7 from "../public/signboards/sign7.png";
-// import sign8 from "../public/signboards/sign8.png";
-// import sign9 from "../public/signboards/sign9.png";
-
-// import display4 from '../public/display4.png';
-// import sign10 from "../public/signboards/sign10.png";
-// import sign11 from "../public/signboards/sign11.png";
-// import sign12 from "../public/signboards/sign12.png";
-
 export default function Home() {
-  const [clicked, setClicked] = useState(false);
-  const [clicked2, setClicked2] = useState(false);
-  const [clicked3, setClicked3] = useState(false);
-  const [clicked4, setClicked4] = useState(false);
-
-  const btnClicked = () => {
-    setClicked(!clicked);
-  }
-
-  const btnClicked2 = () => {
-    setClicked2(!clicked2);
-  }
-
-  const btnClicked3 = () => {
-    setClicked3(!clicked3);
-  }
-
-  const btnClicked4 = () => {
-    setClicked4(!clicked4);
-  }
-
-  const {ref, inView} = useInView();
-
-  const animation = useAnimation();
-  useEffect(() => {
-    if(inView){
-      animation.start({
-        y: 0,
-        transition: {
-          type: 'spring', duration: 1, bounce: 0.3
-        }
-      });
-    }
-    if(!inView){
-      animation.start({y: '+10vw'});
-    }
-    console.log("use effect hook, inView = ",inView);
-  });
-
   return (
     <div className="relative bg-white overflow-hidden">
-      < Header />
-      < Hero />
-
+        <Header />
+        <Hero />
       {/*Projects Section*/}
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
         <Projects />
-
       </div>
 
       {/*Contact us Section */}
@@ -114,7 +46,7 @@ export default function Home() {
           <div className="m-auto">
             <p>Design Printing & Production</p>
             <p>Brand Management (Retainer)</p>
-            <p>Content</p>
+            <p>Content Creation</p>
             <p>Motion and Graphic Design</p>
             <p>Copy Writing</p>
           </div>
@@ -122,7 +54,7 @@ export default function Home() {
       </div>
 
       {/*Clients Section*/}
-      <div className="my-12">
+      <div id="clients" className="my-12">
         <div className="flex">
           <p className="title" >Clients</p>
         </div>

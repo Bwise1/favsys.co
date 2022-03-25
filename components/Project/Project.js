@@ -11,7 +11,7 @@ export default function Project(props) {
 
     const btnClicked = () => {
         setClicked(!clicked);
-      }
+    }
 
     const animation = useAnimation();
     useEffect(() => {
@@ -19,14 +19,14 @@ export default function Project(props) {
             animation.start({
                 y: 0,
                 transition: {
-                    type: 'spring', duration: 1, bounce: 0.3
+                    type: 'spring', duration: 3, bounce: 0.3
                 }
             });
         }
         if (!inView) {
             animation.start({ y: '+10vw' });
         }
-        console.log("use effect hook, inView = ", inView);
+        //console.log("use effect hook, inView = ", inView);
     });
 
     return (
