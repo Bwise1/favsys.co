@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default function Contact (req, res) {
     require('dotenv').config()
 
     let nodemailer = require('nodemailer')

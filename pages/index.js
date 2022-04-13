@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Contact from "../components/Forms/Contact";
@@ -8,8 +8,8 @@ import Projects from "../components/Project/Projects";
 export default function Home() {
   return (
     <div className="relative bg-white overflow-hidden">
-        <Header />
-        <Hero />
+      <Header />
+      <Hero />
       {/*Projects Section*/}
       <div id="projects" className="projects container py-8 space-y-8 lg:py-16">
         <Projects />
@@ -18,7 +18,7 @@ export default function Home() {
       {/*Contact us Section */}
       <div id="contact" className="container my-12">
         <div className="text-xl font-umbaBold">
-          <h2 >In need of our Service</h2>
+          <h2>In need of our Service</h2>
         </div>
         <Contact />
       </div>
@@ -56,7 +56,7 @@ export default function Home() {
       {/*Clients Section*/}
       <div id="clients" className="my-12">
         <div className="flex">
-          <p className="title" >Clients</p>
+          <p className="title">Clients</p>
         </div>
         <Clients />
       </div>
@@ -66,21 +66,48 @@ export default function Home() {
         <footer className="bg-black text-sm text-center lg:text-left font-umbaReg my-auto">
           <div className="container text-white gap-4 grid lg:grid-cols-2  py-8">
             <div className="m-auto alignitems-center">
-              <p >For more enquiries:</p>
-              <p> <a className='' href="mailto:info@favsys.co">info@favsys.co</a> </p>
-              <p> <a className='' href="tel:+2348136631392">Call: +234 (0) 813 663 1392</a></p>
+              <p>For more enquiries:</p>
+              <p>
+                {" "}
+                <a className="" href="mailto:info@favsys.co">
+                  info@favsys.co
+                </a>{" "}
+              </p>
+              <p>
+                <a className="" href="tel:+2348136631392">
+                  Call: +234 (0) 813 663 1392
+                </a>
+              </p>
             </div>
             <div className="flex gap-6 m-auto">
-              <p>Instagram</p>
-              <p>Twitter</p>
-              <p>Linkedin</p>
+              <p>
+                <a className="" href="https://www.instagram.com/fav_sys/">
+                  Instagram
+                </a>
+              </p>
+              {/* <p>
+                <a className="" href="https://www.instagram.com/fav_sys/">
+                  Twitter
+                </a>
+              </p> */}
+              <p>
+                <a
+                  className=""
+                  href="https://www.linkedin.com/company/81290463"
+                >
+                  Linkedin
+                </a>
+              </p>
             </div>
-            <div className='m-auto alignitems-center lg:col-span-2'>
-              <p> <a className='text-sm' >&copy;favsys, 2022 </a></p>
+            <div className="m-auto alignitems-center lg:col-span-2">
+              <p>
+                {" "}
+                <a className="text-sm">&copy;favsys, 2022 </a>
+              </p>
             </div>
           </div>
         </footer>
       </div>
     </div>
-  )
+  );
 }
