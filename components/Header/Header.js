@@ -31,15 +31,13 @@ export default function Header() {
             <div className="flex items-center justify-between w-full">
               <div className="flex items-center space-x-5 mt-4">
                 <Link href="/" to="home">
-                  <a>
-                    <Image
-                      className="cursor-pointer"
-                      src={Logo}
-                      alt="Logo"
-                      height={39}
-                      width={123}
-                    />
-                  </a>
+                  <Image
+                    className="cursor-pointer"
+                    src={Logo}
+                    alt="Logo"
+                    height={39}
+                    width={123}
+                  />
                 </Link>
               </div>
               <div className="hidden md:block">
