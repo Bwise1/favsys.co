@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Contact from "../components/Forms/Contact";
@@ -8,6 +9,10 @@ import Projects from "../components/Project/Projects";
 export default function Home() {
   return (
     <div className="relative bg-white overflow-hidden">
+      <Head>
+        <title>Favsys</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Header />
       <Hero />
       {/*Projects Section*/}
