@@ -48,7 +48,7 @@ export default function Contact() {
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         {!submitted ? (
           <div className="grid gap-y-6 gap-x-16 py-8 font-umbaReg">
             <div className="">
@@ -113,9 +113,9 @@ export default function Contact() {
             </div>
             <div>
               <button
-                onClick={(e) => {
-                  handleSubmit(e);
-                }}
+                // onClick={(e) => {
+                //   handleSubmit(e);
+                // }}
                 className="button py-2 px-4"
               >
                 Submit
